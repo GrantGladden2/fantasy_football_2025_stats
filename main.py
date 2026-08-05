@@ -3,4 +3,4 @@
 from create_tables import *
 
 csv_file = 'fantasy_football_stats_2025.csv'
-split_tables(csv_file)
+df = split_tables(csv_file)
