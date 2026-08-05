@@ -1,14 +1,6 @@
-# Fantasy Football 2025 Season Stats
-from extract_stats import *
-import pandas as pd
+# Main function for fantasy football 2025 season stats
+# Import packages as needed
+from create_tables import *
 
-# Objective of this file:
-# 1. Load in data from the online ESPN website into an html file
-web_link = 'https://fantasydata.com/nfl/fantasy-football-leaders?page=1'
-headers, stats = web_to_table(web_link)
-
-# 2. Create a dataframe based on the headers and data collected
-fantasy_football_df = pd.DataFrame(stats,columns=headers)
-
-# 3. Export a CSV file from the giant table
-fantasy_football_df.to_csv('fantasy_football_stats.csv')
+csv_file = 'fantasy_football_stats_2025.csv'
+split_tables(csv_file)
