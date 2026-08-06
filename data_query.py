@@ -3,7 +3,7 @@ import pandas as pd
 import sqlite3
 
 # This function will read in the file and drop the necessary columns
-def read_csv(csv_file):
+def read_csv(csv_file: str) -> pd.DataFrame:
 
     # Read the csv file to a dataframe
     df = pd.read_csv(csv_file, header=1)
@@ -23,7 +23,7 @@ def read_csv(csv_file):
     return df
 
 # This function will split the data into separate tables to be later queried
-def split_data(start_col,end_col,df):
+def split_data(start_col: str, end_col: str, df: pd.DataFrame) -> pd.DataFrame:
     # If the name of the column does not exist, report back
     if start_col not in df.columns:
         print("That column name does not exist does not exist")
@@ -42,17 +42,23 @@ def split_data(start_col,end_col,df):
 
     # Clean the new table and return
     table = query_data(table)
+
     return table
 
 # This function will query the different tables
-def query_data(table):
+def query_data(table: pd.DataFrame) -> pd.DataFrame:
 
+    # condition = (~table['Rk'].isnull())
+    # table = table[condition]
+
+    # Initiate a drop indeices list
     drop_indices = []
 
-    # Any players with all 0s, remove from the table
+    # Iterate through each row
     for index, row in table.iterrows():
         query_row = row[:-1]
 
+        # Any players with all 0s, remove from the table
         bool_drop = all(stat == 0 for stat in query_row)
         if bool_drop:
             drop_indices.append(index)
