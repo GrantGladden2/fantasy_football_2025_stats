@@ -28,16 +28,22 @@ def split_data(start_col,end_col,df):
     # If end is blank, assume there's only one column
     if  end_col == '':
         table = df[start_col]
+
+        # Clean the new table and return
+        table = query_data(table)
         return table
 
     # Create a new data frame using the table and start and end cols provided
     table = df.loc[:, start_col:end_col]
 
-
+    # Clean the new table and return
+    table = query_data(table)
     return table
 
 # This function will query the different tables
-def query_data():
+def query_data(table):
 
     # Any players with all 0s, remove from the table
-    pass
+
+
+    return table
