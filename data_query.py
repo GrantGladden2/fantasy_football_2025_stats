@@ -17,6 +17,9 @@ def read_csv(csv_file):
         player = current_player.rstrip("*+")
         df.replace(current_player,player,inplace=True)
 
+    # If there is a null value, make it 0
+    df.fillna(0,inplace=True)
+
     return df
 
 # This function will split the data into separate tables to be later queried
@@ -28,14 +31,14 @@ def split_data(start_col,end_col,df):
     # If end is blank, assume there's only one column
     if  end_col == '':
         table = df[start_col]
-        table = pd.concat([table, df['Player'], df['player_id']], axis=1)
+        table = pd.concat([df['Player'], table, df['player_id']], axis=1)
 
     else:
         # Create a new data frame using the table and start and end cols provided
         table = df.loc[:, start_col:end_col]
 
         if 'Player' not in table.columns:
-            table = pd.concat([table,df['Player']], axis=1)
+            table = pd.concat([df['Player'],table], axis=1)
 
         if 'player_id' not in table.columns:
             table = pd.concat([table,df['player_id']], axis=1)
@@ -48,6 +51,7 @@ def split_data(start_col,end_col,df):
 def query_data(table):
 
     # Any players with all 0s, remove from the table
-
+    # for row in table.itertuples():
+    #     print(row)
 
     return table
