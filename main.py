@@ -13,7 +13,7 @@ df.to_csv('fantasy_football_stats_2025.csv', index=False)
 # Create a new table for the games section
 games_table = split_data('Player','G',df)
 # Export table to csv
-games_table.to_csv('games.csv', index=False)
+games_table.to_csv('information.csv', index=False)
 
 # Create a new table for the passing section
 passing_table = split_data('Cmp_pass','Int',df)
