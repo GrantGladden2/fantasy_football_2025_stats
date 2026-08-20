@@ -1,7 +1,3 @@
-DROP DATABASE IF EXISTS fantasy_Stats;
-CREATE DATABASE IF NOT EXISTS fantasy_stats;
-USE fantasy_stats;
-
 -- Create table for game/player information
 CREATE TABLE information (
     player TEXT NOT NULL,
