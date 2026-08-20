@@ -34,7 +34,8 @@ def split_data(start_col: str, end_col: str, df: pd.DataFrame) -> pd.DataFrame:
     # If end is blank, assume there's only one column
     if end_col == '':
         table = df[start_col]
-        table = pd.concat([table, df['-9999']], axis=1)
+        id_col = df[['-9999']].rename(columns={'-9999': 'player_id'})
+        table = pd.concat([table, id_col], axis=1)
 
     else:
         # Create a new data frame using the table and start
@@ -42,7 +43,8 @@ def split_data(start_col: str, end_col: str, df: pd.DataFrame) -> pd.DataFrame:
         table = df.loc[:, start_col:end_col]
 
         if '-9999' not in table.columns:
-            table = pd.concat([table, df['-9999']], axis=1)
+            id_col = df[['-9999']].rename(columns={'-9999': 'player_id'})
+            table = pd.concat([table, id_col], axis=1)
 
     # Clean the new table and return
     table = query_data(table)
