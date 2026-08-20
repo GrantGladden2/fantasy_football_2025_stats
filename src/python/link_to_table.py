@@ -1,5 +1,5 @@
 # Fantasy Football 2025 Season Stats
-from extract_stats import *
+from Python.extract_stats import *
 import pandas as pd
 
 # Objective of this file:

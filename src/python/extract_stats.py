@@ -3,6 +3,7 @@
 import requests
 from bs4 import BeautifulSoup
 
+
 def web_to_table(website_link):
 
     # Read in the website link to a variable
@@ -37,7 +38,8 @@ def web_to_table(website_link):
         current_player.append(td.get_text())
         i += 1
 
-        # If the list gets to the same length as the header list, create a new list
+        # If the list gets to the same length as the header list,
+        # create a new list
         if i == len(headers):
             stats.append(current_player)
             current_player = []

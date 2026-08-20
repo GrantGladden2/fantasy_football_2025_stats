@@ -1,14 +1,15 @@
+DROP DATABASE IF EXISTS fantasy_Stats;
 CREATE DATABASE IF NOT EXISTS fantasy_stats;
 USE fantasy_stats;
 
 -- Create table for game/player information
 CREATE TABLE information (
-	player_id VARCHAR(50) PRIMARY KEY,
     player TEXT NOT NULL,
     team TEXT,
     position TEXT,
     age INT,
-    games INT
+    games INT,
+    player_id VARCHAR(50) PRIMARY KEY
 );
 
 -- Create table for passing stats
@@ -53,7 +54,6 @@ CREATE TABLE fumbles (
 
 -- Create table for scoring
 CREATE TABLE scoring (
-	total_touchdowns INT,
     two_point_made INT,
     two_point_passes INT,
     player_id VARCHAR(50),
