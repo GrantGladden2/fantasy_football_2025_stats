@@ -3,13 +3,14 @@ import pandas as pd
 
 
 # This function will read in the file and drop the necessary columns
-def read_csv(csv_file: str) -> pd.DataFrame:
+def read_csv(txt_file: str) -> pd.DataFrame:
 
-    # Read the csv file to a dataframe
-    df = pd.read_csv(csv_file, header=1)
+    # Read the txt file to a dataframe
+    df = pd.read_csv(txt_file, header=1)
+    print(df.columns)
 
     # Drop unnecessary columns
-    df.drop(columns=['Rk', 'GS', 'TD_tot', 'FantPt', 'DKPt', 'FDPt', 'VBD',
+    df.drop(columns=['Rk', 'GS', 'FantPt', 'DKPt', 'FDPt', 'VBD',
                      'PosRank', 'OvRank'], inplace=True)
 
     # Clean the other data that needs to be cleaned
@@ -33,15 +34,15 @@ def split_data(start_col: str, end_col: str, df: pd.DataFrame) -> pd.DataFrame:
     # If end is blank, assume there's only one column
     if end_col == '':
         table = df[start_col]
-        table = pd.concat([table, df['player_id']], axis=1)
+        table = pd.concat([table, df['-9999']], axis=1)
 
     else:
         # Create a new data frame using the table and start
         # and end cols provided
         table = df.loc[:, start_col:end_col]
 
-        if 'player_id' not in table.columns:
-            table = pd.concat([table, df['player_id']], axis=1)
+        if '-9999' not in table.columns:
+            table = pd.concat([table, df['-9999']], axis=1)
 
     # Clean the new table and return
     table = query_data(table)
