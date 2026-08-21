@@ -22,6 +22,9 @@ def read_csv(txt_file: str) -> pd.DataFrame:
     # If there is a null value, make it 0
     df.fillna(0, inplace=True)
 
+    # Keep only the first occurrence of each player_id, drop later duplicates
+    df = df.drop_duplicates(subset="-9999", keep="first")
+
     return df
 
 
