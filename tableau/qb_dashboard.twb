@@ -1,0 +1,1805 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0708.1337                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='f557a77949b852f854890abada8f0bf50c4a314a90f33839e4e51a4e65f539d7' _.fcp.WorkbookFingerprinting.true...creator-author-id='f557a77949b852f854890abada8f0bf50c4a314a90f33839e4e51a4e65f539d7' _.fcp.WorkbookFingerprinting.true...creator-license-type='public' _.fcp.WorkbookFingerprinting.true...creator-machine-id='8bc5424b9b47d1c26d1d55c64f3b12825da28f3152daac31fbac36dfb7fba9e3' _.fcp.WorkbookFingerprinting.true...license-type='public' _.fcp.WorkbookFingerprinting.true...machine-id='8bc5424b9b47d1c26d1d55c64f3b12825da28f3152daac31fbac36dfb7fba9e3' original-version='18.1' source-build='2026.2.1 (20262.26.0708.1337)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <DatagraphCoreV1 />
+    <DatagraphNodeAxisTitle />
+    <DatagraphNodeSingleValueFieldV1 />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='qb_dashboard' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+    <color-palette custom='true' name='Black-Grey' type='ordered-diverging'>
+      <color>#ffffff</color>
+      <color>#c0c0c0</color>
+      <color>#666666</color>
+      <color>#000000</color>
+    </color-palette>
+    <color-palette custom='true' name='Red-Yellow' type='ordered-diverging'>
+      <color>#b80000</color>
+      <color>#f3a342</color>
+      <color>#fff241</color>
+    </color-palette>
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column alias='Pass Td Points' caption='Metric Selector' datatype='string' name='[Parameter 0032473291399168]' param-domain-type='list' role='measure' type='nominal' value='&quot;fnt_pass_tds&quot;'>
+        <calculation class='tableau' formula='&quot;fnt_pass_tds&quot;' />
+        <aliases>
+          <alias key='&quot;fnt_pass_tds&quot;' value='Pass Td Points' />
+          <alias key='&quot;fnt_pass_yds&quot;' value='Pass Yd Points' />
+          <alias key='&quot;fnt_ppr&quot;' value='Fantasy Points' />
+          <alias key='&quot;fnt_rush_tds&quot;' value='Rush Td Points' />
+          <alias key='&quot;fnt_rush_yds&quot;' value='Rush Yd Points' />
+          <alias key='&quot;fumbles&quot;' value='Fumbles' />
+        </aliases>
+        <members>
+          <member alias='Fumbles' value='&quot;fumbles&quot;' />
+          <member alias='Fantasy Points' value='&quot;fnt_ppr&quot;' />
+          <member alias='Pass Yd Points' value='&quot;fnt_pass_yds&quot;' />
+          <member alias='Pass Td Points' value='&quot;fnt_pass_tds&quot;' />
+          <member alias='Rush Yd Points' value='&quot;fnt_rush_yds&quot;' />
+          <member alias='Rush Td Points' value='&quot;fnt_rush_tds&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='qb_fantasy_table (2)' inline='true' name='federated.1jypabh1782d6u153jfeh18htxpz' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='qb_fantasy_table' name='textscan.0horygr0nvs7581djdpn203m2mit'>
+            <connection class='textscan' directory='C:/Users/Grant/OneDrive/Data Analytics/Personal Projects/Fantasy Football 25 Season/data/cleaned' filename='qb_fantasy_table.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='filter_headers' name='textscan.0pcgfh00jvanu81cfj9xx1ik0qux'>
+            <connection class='textscan' directory='C:/Users/Grant/OneDrive/Data Analytics/Personal Projects/Fantasy Football 25 Season/tableau' filename='filter_headers.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0horygr0nvs7581djdpn203m2mit' name='qb_fantasy_table.csv' table='[qb_fantasy_table#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='games' ordinal='0' />
+            <column datatype='string' name='player' ordinal='1' />
+            <column datatype='string' name='team' ordinal='2' />
+            <column datatype='real' name='fumbles' ordinal='3' />
+            <column datatype='real' name='pts_per_attempt' ordinal='4' />
+            <column datatype='real' name='fnt_ppr' ordinal='5' />
+            <column datatype='real' name='fnt_pass_yds' ordinal='6' />
+            <column datatype='real' name='fnt_pass_tds' ordinal='7' />
+            <column datatype='real' name='fnt_rush_yds' ordinal='8' />
+            <column datatype='real' name='fnt_rush_tds' ordinal='9' />
+            <column datatype='real' name='total_check' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>games</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[games]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>games</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>player</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>team</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fumbles</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fumbles]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>fumbles</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pts_per_attempt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pts_per_attempt]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>pts_per_attempt</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fnt_ppr</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fnt_ppr]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>fnt_ppr</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fnt_pass_yds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fnt_pass_yds]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>fnt_pass_yds</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fnt_pass_tds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fnt_pass_tds]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>fnt_pass_tds</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fnt_rush_yds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fnt_rush_yds]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>fnt_rush_yds</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fnt_rush_tds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fnt_rush_tds]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>fnt_rush_tds</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_check</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_check]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>total_check</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Selected Measure' datatype='real' name='[Calculation_0032473326395407]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 0032473291399168]&#13;&#10;    WHEN &apos;fumbles&apos; &#13;&#10;    THEN [fumbles] &#13;&#10;    WHEN &apos;fnt_ppr&apos; &#13;&#10;    THEN [fnt_ppr]  &#13;&#10;    WHEN &apos;fnt_pass_yds&apos; &#13;&#10;    THEN [fnt_pass_yds]&#13;&#10;    WHEN &apos;fnt_pass_tds&apos; &#13;&#10;    THEN [fnt_pass_tds] &#13;&#10;    WHEN &apos;fnt_rush_yds&apos; &#13;&#10;    THEN [fnt_rush_yds] &#13;&#10;    WHEN &apos;fnt_rush_tds&apos; &#13;&#10;    THEN [fnt_rush_tds]  &#13;&#10;END' />
+      </column>
+      <column caption='qb_fantasy_table.csv' datatype='table' name='[__tableau_internal_object_id__].[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]' role='measure' type='quantitative' />
+      <column caption='Fnt Pass Tds' datatype='real' name='[fnt_pass_tds]' role='measure' type='quantitative' />
+      <column caption='Fnt Pass Yds' datatype='real' name='[fnt_pass_yds]' role='measure' type='quantitative' />
+      <column caption='Fnt Ppr' datatype='real' name='[fnt_ppr]' role='measure' type='quantitative' />
+      <column caption='Fnt Rush Tds' datatype='real' name='[fnt_rush_tds]' role='measure' type='quantitative' />
+      <column caption='Fnt Rush Yds' datatype='real' name='[fnt_rush_yds]' role='measure' type='quantitative' />
+      <column caption='Fumbles' datatype='real' name='[fumbles]' role='measure' type='quantitative' />
+      <column caption='Games' datatype='integer' name='[games]' role='measure' type='quantitative' />
+      <column caption='Player' datatype='string' name='[player]' role='dimension' type='nominal' />
+      <column caption='Pts Per Attempt' datatype='real' name='[pts_per_attempt]' role='measure' type='quantitative' />
+      <column caption='Team' datatype='string' name='[team]' role='dimension' type='nominal' />
+      <column caption='Total Check' datatype='real' name='[total_check]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Grant/AppData/Local/Temp/TableauTemp/#TableauTemp_1iq93vv1s390hf19o24001phvjm7.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/24/2026 09:51:50 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>games</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[games]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>games</remote-alias>
+              <ordinal>0</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>player</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[player]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>player</remote-alias>
+              <ordinal>1</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>team</remote-alias>
+              <ordinal>2</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fumbles</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fumbles]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fumbles</remote-alias>
+              <ordinal>3</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pts_per_attempt</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pts_per_attempt]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pts_per_attempt</remote-alias>
+              <ordinal>4</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fnt_ppr</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fnt_ppr]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fnt_ppr</remote-alias>
+              <ordinal>5</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fnt_pass_yds</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fnt_pass_yds]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fnt_pass_yds</remote-alias>
+              <ordinal>6</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fnt_pass_tds</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fnt_pass_tds]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fnt_pass_tds</remote-alias>
+              <ordinal>7</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fnt_rush_yds</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fnt_rush_yds]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fnt_rush_yds</remote-alias>
+              <ordinal>8</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fnt_rush_tds</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fnt_rush_tds]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fnt_rush_tds</remote-alias>
+              <ordinal>9</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_check</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_check]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_check</remote-alias>
+              <ordinal>10</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column alias='Pass Td Points' caption='Metric Selector' datatype='string' name='[Parameter 0032473291399168]' param-domain-type='list' role='measure' type='nominal' value='&quot;fnt_pass_tds&quot;'>
+          <calculation class='tableau' formula='&quot;fnt_pass_tds&quot;' />
+          <aliases>
+            <alias key='&quot;fnt_pass_tds&quot;' value='Pass Td Points' />
+            <alias key='&quot;fnt_pass_yds&quot;' value='Pass Yd Points' />
+            <alias key='&quot;fnt_ppr&quot;' value='Fantasy Points' />
+            <alias key='&quot;fnt_rush_tds&quot;' value='Rush Td Points' />
+            <alias key='&quot;fnt_rush_yds&quot;' value='Rush Yd Points' />
+            <alias key='&quot;fumbles&quot;' value='Fumbles' />
+          </aliases>
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='qb_fantasy_table.csv' id='qb_fantasy_table.csv_7EB5A527FAC54B21B516EB58D5A29C66'>
+            <properties context=''>
+              <relation connection='textscan.0horygr0nvs7581djdpn203m2mit' name='qb_fantasy_table.csv' table='[qb_fantasy_table#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='games' ordinal='0' />
+                  <column datatype='string' name='player' ordinal='1' />
+                  <column datatype='string' name='team' ordinal='2' />
+                  <column datatype='real' name='fumbles' ordinal='3' />
+                  <column datatype='real' name='pts_per_attempt' ordinal='4' />
+                  <column datatype='real' name='fnt_ppr' ordinal='5' />
+                  <column datatype='real' name='fnt_pass_yds' ordinal='6' />
+                  <column datatype='real' name='fnt_pass_tds' ordinal='7' />
+                  <column datatype='real' name='fnt_rush_yds' ordinal='8' />
+                  <column datatype='real' name='fnt_rush_tds' ordinal='9' />
+                  <column datatype='real' name='total_check' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='qb_fantasy_table' inline='true' name='federated.1elob6k0zwnhwd1aynt210ckxgn3' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='qb_fantasy_table' name='textscan.0jmhfo91eyyw711d485xg1id52my'>
+            <connection class='textscan' directory='C:/Users/Grant/OneDrive/Data Analytics/Personal Projects/Fantasy Football 25 Season/data/cleaned' filename='qb_fantasy_table.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0jmhfo91eyyw711d485xg1id52my' name='qb_fantasy_table.csv' table='[qb_fantasy_table#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='games' ordinal='0' />
+            <column datatype='string' name='player' ordinal='1' />
+            <column datatype='string' name='team' ordinal='2' />
+            <column datatype='real' name='fumbles' ordinal='3' />
+            <column datatype='real' name='pts_per_attempt' ordinal='4' />
+            <column datatype='real' name='fnt_ppr' ordinal='5' />
+            <column datatype='real' name='fnt_pass_yds' ordinal='6' />
+            <column datatype='real' name='fnt_pass_tds' ordinal='7' />
+            <column datatype='real' name='fnt_rush_yds' ordinal='8' />
+            <column datatype='real' name='fnt_rush_tds' ordinal='9' />
+            <column datatype='real' name='total_check' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>games</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[games]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>games</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>player</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>team</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fumbles</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fumbles]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>fumbles</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pts_per_attempt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pts_per_attempt]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>pts_per_attempt</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fnt_ppr</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fnt_ppr]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>fnt_ppr</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fnt_pass_yds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fnt_pass_yds]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>fnt_pass_yds</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fnt_pass_tds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fnt_pass_tds]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>fnt_pass_tds</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fnt_rush_yds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fnt_rush_yds]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>fnt_rush_yds</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fnt_rush_tds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fnt_rush_tds]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>fnt_rush_tds</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_check</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_check]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>total_check</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Selected Metric' datatype='real' name='[Calculation_0032473292144641]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 0032473291399168]&#13;&#10;    WHEN &apos;fumbles&apos; &#13;&#10;    THEN [fumbles] &#13;&#10;    WHEN &apos;fnt_ppr&apos; &#13;&#10;    THEN [fnt_ppr]  &#13;&#10;    WHEN &apos;fnt_pass_yds&apos; &#13;&#10;    THEN [fnt_pass_yds]&#13;&#10;    WHEN &apos;fnt_pass_tds&apos; &#13;&#10;    THEN [fnt_pass_tds] &#13;&#10;    WHEN &apos;fnt_rush_yds&apos; &#13;&#10;    THEN [fnt_rush_yds] &#13;&#10;    WHEN &apos;fnt_rush_tds&apos; &#13;&#10;    THEN [fnt_rush_tds]  &#13;&#10;END' />
+      </column>
+      <column caption='Highest Stat' datatype='real' name='[Calculation_0032473301565444]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='MAX([Calculation_0032473292144641])' />
+      </column>
+      <column caption='qb_fantasy_table.csv' datatype='table' name='[__tableau_internal_object_id__].[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]' role='measure' type='quantitative' />
+      <column caption='Fnt Pass Tds' datatype='real' name='[fnt_pass_tds]' role='measure' type='quantitative' />
+      <column caption='Fnt Pass Yds' datatype='real' name='[fnt_pass_yds]' role='measure' type='quantitative' />
+      <column caption='Fnt Ppr' datatype='real' name='[fnt_ppr]' role='measure' type='quantitative' />
+      <column caption='Fnt Rush Tds' datatype='real' name='[fnt_rush_tds]' role='measure' type='quantitative' />
+      <column caption='Fnt Rush Yds' datatype='real' name='[fnt_rush_yds]' role='measure' type='quantitative' />
+      <column caption='Fumbles' datatype='real' name='[fumbles]' role='measure' type='quantitative' />
+      <column caption='Games' datatype='integer' name='[games]' role='measure' type='quantitative' />
+      <column caption='Player' datatype='string' name='[player]' role='dimension' type='nominal' />
+      <column caption='Pts Per Attempt' datatype='real' name='[pts_per_attempt]' role='measure' type='quantitative' />
+      <column caption='Team' datatype='string' name='[team]' role='dimension' type='nominal' />
+      <column caption='Total Check' datatype='real' name='[total_check]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Grant/AppData/Local/Temp/TableauTemp/#TableauTemp_1crutcz0endtnw1adllbk19ohgsd.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/24/2026 09:08:27 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>games</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[games]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>games</remote-alias>
+              <ordinal>0</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>player</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[player]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>player</remote-alias>
+              <ordinal>1</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>team</remote-alias>
+              <ordinal>2</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fumbles</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fumbles]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fumbles</remote-alias>
+              <ordinal>3</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pts_per_attempt</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pts_per_attempt]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pts_per_attempt</remote-alias>
+              <ordinal>4</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fnt_ppr</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fnt_ppr]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fnt_ppr</remote-alias>
+              <ordinal>5</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fnt_pass_yds</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fnt_pass_yds]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fnt_pass_yds</remote-alias>
+              <ordinal>6</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fnt_pass_tds</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fnt_pass_tds]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fnt_pass_tds</remote-alias>
+              <ordinal>7</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fnt_rush_yds</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fnt_rush_yds]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fnt_rush_yds</remote-alias>
+              <ordinal>8</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fnt_rush_tds</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fnt_rush_tds]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fnt_rush_tds</remote-alias>
+              <ordinal>9</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_check</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_check]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_check</remote-alias>
+              <ordinal>10</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout common-percentage='0.644363' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.355637' show-structure='true' user-set-layout-v2='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column alias='Pass Td Points' caption='Metric Selector' datatype='string' name='[Parameter 0032473291399168]' param-domain-type='list' role='measure' type='nominal' value='&quot;fnt_pass_tds&quot;'>
+          <calculation class='tableau' formula='&quot;fnt_pass_tds&quot;' />
+          <aliases>
+            <alias key='&quot;fnt_pass_tds&quot;' value='Pass Td Points' />
+            <alias key='&quot;fnt_pass_yds&quot;' value='Pass Yd Points' />
+            <alias key='&quot;fnt_ppr&quot;' value='Fantasy Points' />
+            <alias key='&quot;fnt_rush_tds&quot;' value='Rush Td Points' />
+            <alias key='&quot;fnt_rush_yds&quot;' value='Rush Yd Points' />
+            <alias key='&quot;fumbles&quot;' value='Fumbles' />
+          </aliases>
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='qb_fantasy_table.csv' id='qb_fantasy_table.csv_58C43D8C8D3345278C12D97F555B4980'>
+            <properties context=''>
+              <relation connection='textscan.0jmhfo91eyyw711d485xg1id52my' name='qb_fantasy_table.csv' table='[qb_fantasy_table#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='games' ordinal='0' />
+                  <column datatype='string' name='player' ordinal='1' />
+                  <column datatype='string' name='team' ordinal='2' />
+                  <column datatype='real' name='fumbles' ordinal='3' />
+                  <column datatype='real' name='pts_per_attempt' ordinal='4' />
+                  <column datatype='real' name='fnt_ppr' ordinal='5' />
+                  <column datatype='real' name='fnt_pass_yds' ordinal='6' />
+                  <column datatype='real' name='fnt_pass_tds' ordinal='7' />
+                  <column datatype='real' name='fnt_rush_yds' ordinal='8' />
+                  <column datatype='real' name='fnt_rush_tds' ordinal='9' />
+                  <column datatype='real' name='total_check' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Filter Headers'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{EAED25B2-9CF4-423C-9C68-0238250D4036}' />
+    </worksheet>
+    <worksheet name='Qb Stat KPI'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff' fontsize='18'>Highest Stat</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='qb_fantasy_table' name='federated.1elob6k0zwnhwd1aynt210ckxgn3' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column alias='Pass Td Points' caption='Metric Selector' datatype='string' name='[Parameter 0032473291399168]' param-domain-type='list' role='measure' type='nominal' value='&quot;fnt_pass_tds&quot;'>
+              <calculation class='tableau' formula='&quot;fnt_pass_tds&quot;' />
+              <aliases>
+                <alias key='&quot;fnt_pass_tds&quot;' value='Pass Td Points' />
+                <alias key='&quot;fnt_pass_yds&quot;' value='Pass Yd Points' />
+                <alias key='&quot;fnt_ppr&quot;' value='Fantasy Points' />
+                <alias key='&quot;fnt_rush_tds&quot;' value='Rush Td Points' />
+                <alias key='&quot;fnt_rush_yds&quot;' value='Rush Yd Points' />
+                <alias key='&quot;fumbles&quot;' value='Fumbles' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1elob6k0zwnhwd1aynt210ckxgn3'>
+            <column caption='Selected Metric' datatype='real' name='[Calculation_0032473292144641]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 0032473291399168]&#13;&#10;    WHEN &apos;fumbles&apos; &#13;&#10;    THEN [fumbles] &#13;&#10;    WHEN &apos;fnt_ppr&apos; &#13;&#10;    THEN [fnt_ppr]  &#13;&#10;    WHEN &apos;fnt_pass_yds&apos; &#13;&#10;    THEN [fnt_pass_yds]&#13;&#10;    WHEN &apos;fnt_pass_tds&apos; &#13;&#10;    THEN [fnt_pass_tds] &#13;&#10;    WHEN &apos;fnt_rush_yds&apos; &#13;&#10;    THEN [fnt_rush_yds] &#13;&#10;    WHEN &apos;fnt_rush_tds&apos; &#13;&#10;    THEN [fnt_rush_tds]  &#13;&#10;END' />
+            </column>
+            <column caption='Highest Stat' datatype='real' name='[Calculation_0032473301565444]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MAX([Calculation_0032473292144641])' />
+            </column>
+            <column caption='Fnt Pass Tds' datatype='real' name='[fnt_pass_tds]' role='measure' type='quantitative' />
+            <column caption='Fnt Pass Yds' datatype='real' name='[fnt_pass_yds]' role='measure' type='quantitative' />
+            <column caption='Fnt Ppr' datatype='real' name='[fnt_ppr]' role='measure' type='quantitative' />
+            <column caption='Fnt Rush Tds' datatype='real' name='[fnt_rush_tds]' role='measure' type='quantitative' />
+            <column caption='Fnt Rush Yds' datatype='real' name='[fnt_rush_yds]' role='measure' type='quantitative' />
+            <column caption='Fumbles' datatype='real' name='[fumbles]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0032473301565444]' derivation='User' name='[usr:Calculation_0032473301565444:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='vertical-align' data-class='subtotal' scope='cols' value='center' />
+            <format attr='text-align' value='center' />
+            <format attr='text-orientation' value='0' />
+            <format attr='text-align' data-class='subtotal' scope='rows' value='auto' />
+            <format attr='vertical-align' data-class='subtotal' scope='rows' value='auto' />
+            <format attr='wrap' data-class='subtotal' scope='rows' value='auto' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='text-orientation' data-class='subtotal' scope='cols' value='-90' />
+            <format attr='wrap' data-class='total' scope='rows' value='auto' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' scope='cols' value='center' />
+            <format attr='vertical-align' scope='cols' value='center' />
+            <format attr='text-orientation' scope='cols' value='-90' />
+            <format attr='text-align' scope='rows' value='auto' />
+            <format attr='vertical-align' scope='rows' value='auto' />
+            <format attr='wrap' scope='rows' value='auto' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='subtotal' value='#00000000' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='72' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[usr:Calculation_0032473301565444:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{79716DBF-251C-4DA7-84B8-29CEB791447B}' />
+    </worksheet>
+    <worksheet name='Qb Stats'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontsize='14'>Stats Based off Different Parameters</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='qb_fantasy_table' name='federated.1elob6k0zwnhwd1aynt210ckxgn3' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column alias='Pass Td Points' caption='Metric Selector' datatype='string' name='[Parameter 0032473291399168]' param-domain-type='list' role='measure' type='nominal' value='&quot;fnt_pass_tds&quot;'>
+              <calculation class='tableau' formula='&quot;fnt_pass_tds&quot;' />
+              <aliases>
+                <alias key='&quot;fnt_pass_tds&quot;' value='Pass Td Points' />
+                <alias key='&quot;fnt_pass_yds&quot;' value='Pass Yd Points' />
+                <alias key='&quot;fnt_ppr&quot;' value='Fantasy Points' />
+                <alias key='&quot;fnt_rush_tds&quot;' value='Rush Td Points' />
+                <alias key='&quot;fnt_rush_yds&quot;' value='Rush Yd Points' />
+                <alias key='&quot;fumbles&quot;' value='Fumbles' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1elob6k0zwnhwd1aynt210ckxgn3'>
+            <column caption='Selected Metric' datatype='real' name='[Calculation_0032473292144641]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 0032473291399168]&#13;&#10;    WHEN &apos;fumbles&apos; &#13;&#10;    THEN [fumbles] &#13;&#10;    WHEN &apos;fnt_ppr&apos; &#13;&#10;    THEN [fnt_ppr]  &#13;&#10;    WHEN &apos;fnt_pass_yds&apos; &#13;&#10;    THEN [fnt_pass_yds]&#13;&#10;    WHEN &apos;fnt_pass_tds&apos; &#13;&#10;    THEN [fnt_pass_tds] &#13;&#10;    WHEN &apos;fnt_rush_yds&apos; &#13;&#10;    THEN [fnt_rush_yds] &#13;&#10;    WHEN &apos;fnt_rush_tds&apos; &#13;&#10;    THEN [fnt_rush_tds]  &#13;&#10;END' />
+            </column>
+            <column caption='Fnt Pass Tds' datatype='real' name='[fnt_pass_tds]' role='measure' type='quantitative' />
+            <column caption='Fnt Pass Yds' datatype='real' name='[fnt_pass_yds]' role='measure' type='quantitative' />
+            <column caption='Fnt Ppr' datatype='real' name='[fnt_ppr]' role='measure' type='quantitative' />
+            <column caption='Fnt Rush Tds' datatype='real' name='[fnt_rush_tds]' role='measure' type='quantitative' />
+            <column caption='Fnt Rush Yds' datatype='real' name='[fnt_rush_yds]' role='measure' type='quantitative' />
+            <column caption='Fumbles' datatype='real' name='[fumbles]' role='measure' type='quantitative' />
+            <column-instance column='[player]' derivation='None' name='[none:player:nk]' pivot='key' type='nominal' />
+            <column caption='Player' datatype='string' name='[player]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_0032473292144641]' derivation='Sum' name='[sum:Calculation_0032473292144641:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[fnt_ppr]' derivation='Sum' name='[sum:fnt_ppr:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[none:player:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[sum:Calculation_0032473292144641:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[sum:Calculation_0032473292144641:qk]' scope='cols' value='Pass Td Points' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+            <format attr='tick-color' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[sum:Calculation_0032473292144641:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[none:player:nk]' value='#000000' />
+            <format attr='font-size' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[none:player:nk]' value='12' />
+            <format attr='font-size' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[sum:Calculation_0032473292144641:qk]' value='12' />
+            <format attr='color' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[sum:Calculation_0032473292144641:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+            <format attr='background-color' scope='rows' value='#00000000' />
+            <format attr='background-color' scope='cols' value='#00000000' />
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='background-color' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[none:player:nk]' value='#e8860f' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='color' value='#000000' />
+            <format attr='font-size' value='12' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='field-labels-decoration'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='field-labels-spanner'>
+            <format attr='background-color' scope='rows' value='#00000000' />
+            <format attr='background-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[none:player:nk]' value='12' />
+            <format attr='color' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[none:player:nk]' value='#000000' />
+            <format attr='text-align' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[none:player:nk]' value='right' />
+            <format attr='vertical-align' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[none:player:nk]' value='center' />
+            <format attr='font-size' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[sum:Calculation_0032473292144641:qk]' value='12' />
+            <format attr='color' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[sum:Calculation_0032473292144641:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[sum:Calculation_0032473292144641:qk]' palette='Red-Yellow' reverse='true' type='interpolated' />
+            <encoding attr='color' center='242.44999999999999' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[sum:fnt_ppr:qk]' max='364.60000000000002' min='120.3' palette='Black-Grey' type='interpolated' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='subtotal' value='#00000000' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='band-size' scope='rows' value='0' />
+            <format attr='band-size' scope='cols' value='0' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[sum:fnt_ppr:qk]' value='Fantasy Points'>
+              <formatted-text>
+                <run>Fantasy Points</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[sum:fnt_ppr:qk]' />
+              <text column='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[sum:Calculation_0032473292144641:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1elob6k0zwnhwd1aynt210ckxgn3].[none:player:nk]</rows>
+        <cols>[federated.1elob6k0zwnhwd1aynt210ckxgn3].[sum:Calculation_0032473292144641:qk]</cols>
+      </table>
+      <simple-id uuid='{BD80D623-76C1-4297-A0D7-4EC3D24F5344}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column alias='Pass Td Points' caption='Metric Selector' datatype='string' name='[Parameter 0032473291399168]' param-domain-type='list' role='measure' type='nominal' value='&quot;fnt_pass_tds&quot;'>
+          <calculation class='tableau' formula='&quot;fnt_pass_tds&quot;' />
+          <aliases>
+            <alias key='&quot;fnt_pass_tds&quot;' value='Pass Td Points' />
+            <alias key='&quot;fnt_pass_yds&quot;' value='Pass Yd Points' />
+            <alias key='&quot;fnt_ppr&quot;' value='Fantasy Points' />
+            <alias key='&quot;fnt_rush_tds&quot;' value='Rush Td Points' />
+            <alias key='&quot;fnt_rush_yds&quot;' value='Rush Yd Points' />
+            <alias key='&quot;fumbles&quot;' value='Fumbles' />
+          </aliases>
+          <members>
+            <member alias='Fumbles' value='&quot;fumbles&quot;' />
+            <member alias='Fantasy Points' value='&quot;fnt_ppr&quot;' />
+            <member alias='Pass Yd Points' value='&quot;fnt_pass_yds&quot;' />
+            <member alias='Pass Td Points' value='&quot;fnt_pass_tds&quot;' />
+            <member alias='Rush Yd Points' value='&quot;fnt_rush_yds&quot;' />
+            <member alias='Rush Td Points' value='&quot;fnt_rush_tds&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98668' id='7' param='horz' type-v2='layout-flow' w='99320' x='340' y='666'>
+            <zone h='98668' id='5' type-v2='layout-basic' w='99320' x='340' y='666'>
+              <zone forceUpdate='true' h='98668' id='1' is-centered='0' is-scaled='1' param='C:/Users/Grant/OneDrive/Data Analytics/Personal Projects/Fantasy Football 25 Season/tableau/dashboard_background.png' type-v2='bitmap' w='99320' x='340' y='666'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='0' />
+                  <format attr='background-color' value='#000000' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='87937' id='3' param='vert' type-v2='layout-flow' w='58085' x='31447' y='10399'>
+          <zone fixed-size='24' forceUpdate='true' h='2663' id='10' is-fixed='true' type-v2='text' w='58085' x='31447' y='10399'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#000000' fontsize='14'>Stats Based Off Different Categories</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='85244' id='4' name='Qb Stats' show-title='false' w='58085' x='31447' y='13062'>
+            <layout-cache cell-count-h='31' minwidth='260' non-cell-size-h='86' type-h='cell' type-w='scalable' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='2163' id='9' mode='compact' param='[Parameters].[Parameter 0032473291399168]' show-title='false' type-v2='paramctrl' w='12766' x='76553' y='10815' />
+        <zone h='12230' id='11' name='Qb Stat KPI' show-title='false' w='29957' x='894' y='52745' />
+        <zone forceUpdate='true' h='3245' id='12' type-v2='text' w='29745' x='979' y='51414'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff' fontname='Tableau Light' fontsize='17'>Highest &lt;</run>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff' fontname='Tableau Light' fontsize='17'>[Parameters].[Parameter 0032473291399168]</run>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff' fontname='Tableau Light' fontsize='17'>&gt;</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='900' minheight='900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='14' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98668' id='13' param='vert' type-v2='layout-flow' w='99320' x='340' y='666'>
+                <zone fixed-size='280' forceUpdate='true' h='98668' id='1' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Grant/OneDrive/Data Analytics/Personal Projects/Fantasy Football 25 Season/tableau/dashboard_background.png' type-v2='bitmap' w='99320' x='340' y='666'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#000000' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='24' forceUpdate='true' h='2663' id='10' type-v2='text' w='58085' x='31447' y='10399'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontsize='14'>Stats Based Off Different Categories</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2163' id='9' mode='compact' param='[Parameters].[Parameter 0032473291399168]' show-title='false' type-v2='paramctrl' w='12766' x='76553' y='10815'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='85244' id='4' is-fixed='true' name='Qb Stats' show-title='false' w='58085' x='31447' y='13062'>
+                  <layout-cache cell-count-h='31' minwidth='260' non-cell-size-h='86' type-h='cell' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3245' id='12' type-v2='text' w='29745' x='979' y='51414'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#ffffff' fontname='Tableau Light' fontsize='17'>Highest &lt;</run>
+                    <run bold='true' fontalignment='1' fontcolor='#ffffff' fontname='Tableau Light' fontsize='17'>[Parameters].[Parameter 0032473291399168]</run>
+                    <run bold='true' fontalignment='1' fontcolor='#ffffff' fontname='Tableau Light' fontsize='17'>&gt;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='98' h='12230' id='11' is-fixed='true' name='Qb Stat KPI' show-title='false' w='29957' x='894' y='52745'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{B366AD0E-14A7-4D50-BEC0-8354ACD67939}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='51'>
+    <window class='worksheet' name='Qb Stats'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 0032473291399168]' type='parameter' />
+            <card pane-specification-id='1' param='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[sum:fnt_ppr:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1elob6k0zwnhwd1aynt210ckxgn3].[none:player:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{59B7E0C6-C260-4B94-B277-4C0EE8A8858A}' />
+    </window>
+    <window class='worksheet' name='Qb Stat KPI'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1elob6k0zwnhwd1aynt210ckxgn3].[max:player:nk]</field>
+            <field>[federated.1elob6k0zwnhwd1aynt210ckxgn3].[none:Calculation_0032473308471309:qk]</field>
+            <field>[federated.1elob6k0zwnhwd1aynt210ckxgn3].[none:player:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A89F7D5F-6B3D-460D-A3F3-DDBD446E2C42}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Qb Stat KPI'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Qb Stats'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='9' />
+      <device-preview visible='true'>
+        <device is-portrait='false' name='Medium Desktop Monitor' type='Desktop' />
+      </device-preview>
+      <simple-id uuid='{C6DB5652-73A6-42B8-AF71-13337E68167E}' />
+    </window>
+    <window class='worksheet' name='Filter Headers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{87651A7C-B3FC-47B5-80C5-F0FA7ED8928C}' />
+    </window>
+  </windows>
+  <datagraph>
+    <graph>
+      <properties>
+        <default-execution-subgraph-guid value='21a52e24-0f99-457c-84f0-6320261c1c91' />
+      </properties>
+      <node-execution-subgraphs>
+        <pair execution-subgraph-guid='21a52e24-0f99-457c-84f0-6320261c1c91' node-guid='fd9a7a13-3bd8-4745-8240-e9b7755a0e69' />
+        <pair execution-subgraph-guid='21a52e24-0f99-457c-84f0-6320261c1c91' node-guid='39879454-e84c-4b78-ac7a-ba36157ace5d' />
+      </node-execution-subgraphs>
+      <nodes>
+        <single-value-field-node fieldname='[Parameters].[Parameter 0032473291399168]' fieldname-input-guid='72c5701f-1460-4d44-bd83-b46797bd42c4' node-guid='fd9a7a13-3bd8-4745-8240-e9b7755a0e69' value-output-guid='b2a8576f-c82b-4d22-a338-5d6d82c3ba85' />
+        <axis-title-node duplicate-index='0' fieldname='[federated.1elob6k0zwnhwd1aynt210ckxgn3].[sum:Calculation_0032473292144641:qk]' node-guid='39879454-e84c-4b78-ac7a-ba36157ace5d' orientation='horizontal' sheet-identifier='{BD80D623-76C1-4297-A0D7-4EC3D24F5344}' title-input-guid='619e4d47-34cd-4433-b803-e15e919f40a8' />
+      </nodes>
+      <edges>
+        <edge from='b2a8576f-c82b-4d22-a338-5d6d82c3ba85' to='619e4d47-34cd-4433-b803-e15e919f40a8' />
+      </edges>
+      <pin-values />
+    </graph>
+  </datagraph>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 2' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Filter Headers' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='137' name='Qb Stat KPI' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAACJCAYAAAB6izejAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAABhUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgLQP8MsFDkby+C8AAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Qb Stats' width='192'>
+      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
+      1cQKELOr+f8B0x7LQJW590QAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

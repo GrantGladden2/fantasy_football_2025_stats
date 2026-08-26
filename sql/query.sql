@@ -39,20 +39,113 @@ WITH passing_table AS (
             AND fa.fantasy_points_ppr IS NOT NULL
         ) AS t1
         WHERE rn = 1
-        AND games > 5
+        AND games > 8
 )
 
-SELECT
-    *,
-    (fnt_pass_yds + fnt_pass_tds + fnt_rush_yds + fnt_rush_tds) AS total_check
+SELECT *
 FROM passing_table
 ORDER BY pts_per_attempt DESC;
 
+-- Create a table for all rushing data
+WITH rushing_table AS (
+    SELECT
+        player,
+        position,
+        games,
+        rush_attempts,
+        rush_ypa,
+        (rush_yds/10)::DECIMAL(5,2) AS rush_yd_pts,
+        (rush_tds*6)::DECIMAL(5,2) AS rush_td_pts,
+        receptions,
+        (rec_yds/10)::DECIMAL(5,2) AS rec_yd_pts,
+        (rec_tds*6)::DECIMAL(5,2) AS rec_td_pts,
+        fumbles,
+        fnt_ppr
+        FROM (
+            SELECT
+                i.player,
+                i.position,
+                i.games,
+                ru.attempts AS rush_attempts,
+                ru.yards AS rush_yds,
+                ru.yards_per_attempt AS rush_ypa,
+                ru.touchdowns AS rush_tds,
+                re.receptions,
+                re.yards AS rec_yds,
+                re.touchdowns AS rec_tds,
+                fu.fumbles,
+                fa.fantasy_points_ppr AS fnt_ppr,
+                ROW_NUMBER() OVER (
+                    PARTITION BY i.team
+                    ORDER BY fa.fantasy_points_ppr DESC
+                ) AS rn,
+                i.player_id
+            FROM information i
+            LEFT JOIN rushing ru ON i.player_id = ru.player_id
+            LEFT JOIN receiving re ON i.player_id = re.player_id
+            LEFT JOIN fumbles fu ON i.player_id = fu.player_id
+            LEFT JOIN fantasy fa ON i.player_id = fa.player_id
+            WHERE ru.attempts IS NOT NULL
+            AND position = 'RB'
+            AND fa.fantasy_points_ppr IS NOT NULL
+        ) AS t1
+        WHERE rn = 1 OR rn = 2
+        AND games > 8
+)
 
--- -- Create a table for all rushing data
 SELECT *
-FROM information
-
+FROM rushing_table
+ORDER BY fnt_ppr DESC;
 
 
 -- Create a table for all receiving data
+WITH receiving_table AS (
+    SELECT
+        player,
+        position,
+        games,
+        targets,
+        receptions,
+        ((receptions/targets)*100)::INT AS catch_percentage,
+        (rec_yds/10)::DECIMAL(5,2) AS rec_yd_pts,
+        (rec_tds*6)::DECIMAL(5,2) AS rec_td_pts,
+        rush_ypa,
+        (rush_yds/10)::DECIMAL(5,2) AS rush_yd_pts,
+        (rush_tds*6)::DECIMAL(5,2) AS rush_td_pts,
+        fumbles,
+        fnt_ppr
+        FROM (
+            SELECT
+                i.player,
+                i.position,
+                i.games,
+                re.targets,
+                re.receptions,
+                re.yards AS rec_yds,
+                re.touchdowns AS rec_tds,
+                ru.yards AS rush_yds,
+                ru.yards_per_attempt AS rush_ypa,
+                ru.touchdowns AS rush_tds,
+                fu.fumbles,
+                fa.fantasy_points_ppr AS fnt_ppr,
+                ROW_NUMBER() OVER (
+                    PARTITION BY i.team
+                    ORDER BY fa.fantasy_points_ppr DESC
+                ) AS rn,
+                i.player_id
+            FROM information i
+            LEFT JOIN rushing ru ON i.player_id = ru.player_id
+            LEFT JOIN receiving re ON i.player_id = re.player_id
+            LEFT JOIN fumbles fu ON i.player_id = fu.player_id
+            LEFT JOIN fantasy fa ON i.player_id = fa.player_id
+            WHERE ru.attempts IS NOT NULL
+            AND position = 'WR'
+            AND fa.fantasy_points_ppr IS NOT NULL
+        ) AS t1
+        WHERE rn = 1 OR rn = 2 OR rn = 3
+        AND games > 8
+)
+
+SELECT *
+FROM receiving_table
+ORDER BY fnt_ppr DESC;
