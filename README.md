@@ -1,74 +1,94 @@
-# Fantasy Football 2025 Stats
+# 2025 Fantasy Football Dashboard
 
-Turning raw fantasy football stats from the 2025 season into clean, easy-to-read visuals — built to break down how players performed across the season.
+An end-to-end data project analyzing final 2025 NFL season stats to help prepare for a 2026 fantasy football draft. Raw stats are scraped and cleaned in Python, structured and queried in SQL, and visualized in an interactive Tableau dashboard — currently built out for QBs, with the same pipeline used for RB, WR, and TE.
 
-## 📊 Overview
+## What it does
 
-This project pulls fantasy football statistics from [FantasyData](https://fantasydata.com/) and transforms them into visualizations that make it easier to spot trends, compare players, and analyze season performance. Instead of scrolling through spreadsheets of raw numbers, this repo turns that data into charts and graphs you can actually read at a glance.
+Pulls full-season 2025 stats for every QB, RB, WR, and TE and turns them into draft-prep visuals: fantasy points, per-game efficiency, scatter plots comparing yardage splits, and turnover/interception trends. Built for anyone drafting a QB (or other position) in 2026, or who just likes digging into fantasy stats.
 
-A cleaned CSV of the 2025 season stats is included in this repo — feel free to use it for your own analysis, or dig into the code to see how the data was processed and visualized.
+## Dashboard preview
 
-## ✨ Features
+**Project explorer**
 
-- Pulls player stats sourced from FantasyData
-- Cleans and organizes raw data into a usable CSV format
-- Generates visualizations for weekly and season-long performance using Matplotlib
-- Compares players across key fantasy metrics
-- [ADD/REMOVE FEATURES AS NEEDED]
+![Project structure](project_structure.png)
 
-## 🖼️ Example Visuals
+**QB Dashboard**
 
-Coming soon — visuals are still in progress. Once created, sample charts will be added here, e.g.:
+![QB Dashboard](qb_dashboard_screenshot.png)
 
-<!-- ![Weekly Points Chart](images/weekly-points-example.png) -->
+The dashboard lets you filter by stat (fantasy points, passing/rushing yards and TDs, interceptions, fumbles), and click any bar or scatterplot marker to drill into a specific player's point distribution (pass yards, pass TDs, rush yards, rush TDs).
 
-## 🛠️ Tech Stack
+## Data
 
-- **Language:** Python
-- **Data Source:** [FantasyData](https://fantasydata.com/)
-- **Libraries:** Pandas (data wrangling), Matplotlib (visualization)
+- **Source:** [Pro Football Reference — 2025 Fantasy stats](https://www.pro-football-reference.com/years/2025/fantasy.htm)
+- **Scope:** Final 2025 regular season stats for all QB/RB/WR/TE
+- **Categories included:** fantasy points (PPR), passing, rushing, receiving, scoring (2-pt conversions), and fumbles
 
-## 🚀 Getting Started
+## Tech stack & workflow
 
-### Prerequisites
+| Tool | What it did |
+|------|-------------|
+| **Python** | Scraped the stats table from the source website (`extract_stats.py`) and cleaned/split the raw data into normalized tables by category (`data_query.py`, `main.py`) |
+| **SQL** | Defined the relational schema (`create_tables.sql`) and wrote queries using joins, window functions, `WHERE`/`GROUP BY`/`ORDER BY`, and views to shape position-specific stat tables (`query.sql`) |
+| **Tableau** | Built the interactive dashboard using calculated fields, parameters, case statements, containers, legends, bar charts, and scatter plots |
 
-- Python 3.10+ (adjust if different)
-- pandas
-- matplotlib
+### Pipeline
 
-### Usage
+1. **Extract** — `extract_stats.py` scrapes the raw stats HTML table from Pro Football Reference.
+2. **Clean & split** — `main.py` runs `data_query.py` functions to strip junk characters/columns, fill missing values, dedupe players, and split the data into category-specific CSVs (`information`, `passing`, `rushing`, `receiving`, `fumbles`, `scoring`, `fantasy`).
+3. **Load & structure** — `create_tables.sql` builds the SQL schema (one `information` table joined to category tables via `player_id`).
+4. **Query** — `query.sql` joins the tables and computes position-specific outputs (e.g., points per attempt/target, points from each yardage/TD category), producing final tables like `qb_fantasy_table.csv`, `rb_fantasy_table.csv`, `wr_fantasy_table.csv`.
+5. **Visualize** — Those tables feed the Tableau workbooks (`qb_dashboard.twb`, `rb_dashboard.twb`, `wr_dashboard.twb`).
 
-**Use the data directly** — grab the CSV file in this repo and plug it into your own analysis/tools.
-
-
-## 📁 Project Structure
+## Project structure
 
 ```
-fantasy_football_2025_stats/
-├── data/            # CSV file(s) with cleaned 2025 season stats
-├── scripts/         # Data cleaning and visualization scripts
-├── visuals/         # Generated charts/graphs (coming soon)
-└── README.md
+Fantasy Football 25 Season/
+├── data/
+│   ├── raw/                          # original scraped/downloaded stats
+│   └── cleaned/                      # cleaned, split CSVs by category
+│       ├── fantasy_football_stats_2025_cleaned.csv
+│       ├── information.csv
+│       ├── passing.csv
+│       ├── rushing.csv
+│       ├── receiving.csv
+│       ├── fumbles.csv
+│       ├── scoring.csv
+│       └── fantasy.csv
+├── sql/
+│   ├── create_tables.sql             # schema definition
+│   ├── query.sql                     # position-specific analysis queries
+│   └── count_table.csv
+├── src/
+│   ├── data_query.py                 # cleaning/splitting functions
+│   ├── extract_stats.py              # web scraping
+│   ├── link_to_table.py
+│   └── main.py                       # pipeline entry point
+└── tableau/
+    ├── final_tables/                 # query outputs feeding Tableau
+    │   ├── qb_fantasy_table.csv
+    │   ├── rb_fantasy_table.csv
+    │   └── wr_fantasy_table.csv
+    ├── qb_dashboard.twb
+    ├── rb_dashboard.twb
+    ├── wr_dashboard.twb
+    └── dashboard_background.png / .pptx
 ```
 
-*(Update this to match your actual folder layout)*
+## Key findings
 
-## 📈 What You Can Analyze
+- **Fantasy points vs. turnovers:** higher-scoring QBs tend to have lower turnover rates overall.
+- **Efficiency vs. interceptions:** QBs with higher pass yards *and* rush yards per game tend to throw fewer interceptions.
+- **Rushing matters:** several QBs who weren't elite passers still ranked well by making it up on the ground, since rushing yards/TDs are worth more fantasy points per unit than passing.
+- **Sleeper pick — Jaxson Dart:** low passing volume, but strong rushing yards and rushing TDs, which carry more fantasy value per yard than passing stats.
+- **Undervalued — Trevor Lawrence:** strong passing volume with a solid rushing mix, outside the top 5 overall despite the well-rounded profile (a few interceptions keep him from ranking higher).
 
-- [e.g., Weekly point trends per player]
-- [e.g., Boom/bust consistency scores]
-- [e.g., Positional performance comparisons]
-- [e.g., Season-long rankings vs. preseason expectations]
+## Using the dashboard
 
-## 🔮 Future Improvements
+- Use the **stat filter** on the left to switch what the bar chart is ranking players by (fantasy points, passing/rushing yards or TDs, interceptions, fumbles).
+- **Click a bar or scatterplot marker** to select a player and see their individual point breakdown (pass yards, pass TDs, rush yards, rush TDs) in the detail panel.
+- The two scatter plots at the bottom show **passing/rushing yardage vs. fantasy points** and **turnover rate vs. fantasy points**, both colored and sized by total points, to help spot trade-offs at a glance.
 
-- Build out first round of visuals (weekly trends, player comparisons, etc.)
-- [Anything else you're planning to add]
+## Setup
 
-## 📝 License
-
-[Add a license if you want, e.g., MIT]
-
-## 🙋 Contact
-
-[Your name / GitHub / how people can reach you]
+This project isn't currently packaged for others to re-run end-to-end (the SQL import step is manual/local). The Tableau dashboard is the intended way to explore the data — see "Using the dashboard" above.
