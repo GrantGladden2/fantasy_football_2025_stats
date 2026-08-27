@@ -6,18 +6,6 @@ An end-to-end data project analyzing final 2025 NFL season stats to help prepare
 
 Pulls full-season 2025 stats for every QB, RB, WR, and TE and turns them into draft-prep visuals: fantasy points, per-game efficiency, scatter plots comparing yardage splits, and turnover/interception trends. Built for anyone drafting a QB (or other position) in 2026, or who just likes digging into fantasy stats.
 
-## Dashboard preview
-
-**Project explorer**
-
-![Project structure](project_structure.png)
-
-**QB Dashboard**
-
-![QB Dashboard](qb_dashboard_screenshot.png)
-
-The dashboard lets you filter by stat (fantasy points, passing/rushing yards and TDs, interceptions, fumbles), and click any bar or scatterplot marker to drill into a specific player's point distribution (pass yards, pass TDs, rush yards, rush TDs).
-
 ## Data
 
 - **Source:** [Pro Football Reference — 2025 Fantasy stats](https://www.pro-football-reference.com/years/2025/fantasy.htm)
@@ -84,6 +72,7 @@ Fantasy Football 25 Season/
 - **Undervalued — Trevor Lawrence:** strong passing volume with a solid rushing mix, outside the top 5 overall despite the well-rounded profile (a few interceptions keep him from ranking higher).
 
 ## Using the dashboard
+The dashboard lets you filter by stat (fantasy points, passing/rushing yards and TDs, interceptions, fumbles), and click any bar or scatterplot marker to drill into a specific player's point distribution (pass yards, pass TDs, rush yards, rush TDs).
 
 - Use the **stat filter** on the left to switch what the bar chart is ranking players by (fantasy points, passing/rushing yards or TDs, interceptions, fumbles).
 - **Click a bar or scatterplot marker** to select a player and see their individual point breakdown (pass yards, pass TDs, rush yards, rush TDs) in the detail panel.
