@@ -6,11 +6,13 @@ WITH passing_table AS (
         position,
         team,
         points::DECIMAL(5,2),
+        attempts,
         (points/attempts)::DECIMAL(3,2) AS pts_per_attempt,
         (pass_yards/25)::DECIMAL(5,2) AS pass_yd_pts,
         (pass_tds*4)::DECIMAL(5,2) AS pass_td_pts,
         (rush_yards/10)::DECIMAL(5,2) AS rush_yd_pts,
         (rush_tds*6)::DECIMAL(5,2) AS rush_td_pts,
+        interceptions,
         fumbles
         FROM (
             SELECT
