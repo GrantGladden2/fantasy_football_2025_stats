@@ -1,0 +1,1980 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0708.1337                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='8bc5424b9b47d1c26d1d55c64f3b12825da28f3152daac31fbac36dfb7fba9e3' _.fcp.WorkbookFingerprinting.true...creator-author-id='8bc5424b9b47d1c26d1d55c64f3b12825da28f3152daac31fbac36dfb7fba9e3' _.fcp.WorkbookFingerprinting.true...creator-license-type='public' _.fcp.WorkbookFingerprinting.true...creator-machine-id='8bc5424b9b47d1c26d1d55c64f3b12825da28f3152daac31fbac36dfb7fba9e3' _.fcp.WorkbookFingerprinting.true...license-type='public' _.fcp.WorkbookFingerprinting.true...machine-id='8bc5424b9b47d1c26d1d55c64f3b12825da28f3152daac31fbac36dfb7fba9e3' original-version='18.1' source-build='2026.2.1 (20262.26.0708.1337)' source-platform='win' version='18.1' xml:base='https://localhost:8080' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <DatagraphCoreV1 />
+    <DatagraphNodeAxisTitle />
+    <DatagraphNodeSingleValueFieldV1 />
+    <IndividualControlFormatting />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+    <WorksheetBackgroundTransparency />
+    <ZoneFriendlyName />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://public.tableau.com/workbooks/qb_dashboard?rev=2.9' id='qb_dashboard' path='/workbooks' revision='2.9' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+    <color-palette custom='true' name='Red-Yellow' type='ordered-diverging'>
+      <color>#fff241</color>
+      <color>#f3a342</color>
+      <color>#b80000</color>
+    </color-palette>
+  </preferences>
+  <style>
+    <style-rule element='dash-title'>
+      <format attr='font-size' value='16' />
+    </style-rule>
+    <style-rule element='story-title'>
+      <format attr='font-size' value='16' />
+    </style-rule>
+  </style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column alias='Fantasy Points' caption='QB Stat Filter' datatype='string' name='[Parameter 2041281858002944]' param-domain-type='list' role='measure' type='nominal' value='&quot;points&quot;'>
+        <calculation class='tableau' formula='&quot;points&quot;' />
+        <aliases>
+          <alias key='&quot;fumbles&quot;' value='Fumbles' />
+          <alias key='&quot;interceptions&quot;' value='Interceptions' />
+          <alias key='&quot;pass_td_pts&quot;' value='Passing Touchdown Points' />
+          <alias key='&quot;pass_yd_pts&quot;' value='Passing Yard Points' />
+          <alias key='&quot;points&quot;' value='Fantasy Points' />
+          <alias key='&quot;rush_td_pts&quot;' value='Rushing Touchdown Points' />
+          <alias key='&quot;rush_yd_pts&quot;' value='Rushing Yard Points' />
+        </aliases>
+        <members>
+          <member alias='Fantasy Points' value='&quot;points&quot;' />
+          <member alias='Passing Yard Points' value='&quot;pass_yd_pts&quot;' />
+          <member alias='Passing Touchdown Points' value='&quot;pass_td_pts&quot;' />
+          <member alias='Rushing Yard Points' value='&quot;rush_yd_pts&quot;' />
+          <member alias='Rushing Touchdown Points' value='&quot;rush_td_pts&quot;' />
+          <member alias='Interceptions' value='&quot;interceptions&quot;' />
+          <member alias='Fumbles' value='&quot;fumbles&quot;' />
+        </members>
+      </column>
+      <column alias='Fantasy Points' caption='WR Stat Filter' datatype='string' name='[QB Stat Filter (copy) (copy)_2041281858621442]' param-domain-type='list' role='measure' type='nominal' value='&quot;points&quot;'>
+        <calculation class='tableau' formula='&quot;points&quot;' />
+        <aliases>
+          <alias key='&quot;fumbles&quot;' value='Fumbles' />
+          <alias key='&quot;points&quot;' value='Fantasy Points' />
+          <alias key='&quot;rec_td_pts&quot;' value='Receiving Touchdown Points' />
+          <alias key='&quot;rec_yd_pts&quot;' value='Receiving Yard Points' />
+          <alias key='&quot;receptions&quot;' value='Receptions' />
+          <alias key='&quot;rush_td_pts&quot;' value='Rushing Touchdown Points' />
+          <alias key='&quot;rush_yd_pts&quot;' value='Rushing Yard Points' />
+          <alias key='&quot;targets&quot;' value='Targets' />
+        </aliases>
+        <members>
+          <member alias='Fantasy Points' value='&quot;points&quot;' />
+          <member alias='Targets' value='&quot;targets&quot;' />
+          <member alias='Receptions' value='&quot;receptions&quot;' />
+          <member alias='Rushing Yard Points' value='&quot;rush_yd_pts&quot;' />
+          <member alias='Rushing Touchdown Points' value='&quot;rush_td_pts&quot;' />
+          <member alias='Receiving Yard Points' value='&quot;rec_yd_pts&quot;' />
+          <member alias='Receiving Touchdown Points' value='&quot;rec_td_pts&quot;' />
+          <member alias='Fumbles' value='&quot;fumbles&quot;' />
+        </members>
+      </column>
+      <column alias='Fumbles' caption='RB Stat Filter' datatype='string' name='[QB Stat Filter (copy)_2041281858613249]' param-domain-type='list' role='measure' type='nominal' value='&quot;fumbles&quot;'>
+        <calculation class='tableau' formula='&quot;fumbles&quot;' />
+        <aliases>
+          <alias key='&quot;fumbles&quot;' value='Fumbles' />
+          <alias key='&quot;points&quot;' value='Fantasy Points' />
+          <alias key='&quot;rec_td_pts&quot;' value='Receiving Touchdown Points' />
+          <alias key='&quot;rec_yd_pts&quot;' value='Receiving Yard Points' />
+          <alias key='&quot;receptions&quot;' value='Receptions' />
+          <alias key='&quot;rush_attempts&quot;' value='Rush Attempts' />
+          <alias key='&quot;rush_td_pts&quot;' value='Rushing Touchdown Points' />
+          <alias key='&quot;rush_yd_pts&quot;' value='Rushing Yard Points' />
+        </aliases>
+        <members>
+          <member alias='Fantasy Points' value='&quot;points&quot;' />
+          <member alias='Rush Attempts' value='&quot;rush_attempts&quot;' />
+          <member alias='Rushing Yard Points' value='&quot;rush_yd_pts&quot;' />
+          <member alias='Rushing Touchdown Points' value='&quot;rush_td_pts&quot;' />
+          <member alias='Receptions' value='&quot;receptions&quot;' />
+          <member alias='Receiving Yard Points' value='&quot;rec_yd_pts&quot;' />
+          <member alias='Receiving Touchdown Points' value='&quot;rec_td_pts&quot;' />
+          <member alias='Fumbles' value='&quot;fumbles&quot;' />
+        </members>
+      </column>
+      <column alias='Rushing Touchdown Points' caption='RB Scatter Plot Stat Filter' datatype='string' name='[RB Stat Filter (copy)_1081683678785547]' param-domain-type='list' role='measure' type='nominal' value='&quot;rush_td_pts&quot;'>
+        <calculation class='tableau' formula='&quot;rush_td_pts&quot;' />
+        <aliases>
+          <alias key='&quot;fumbles&quot;' value='Fumbles' />
+          <alias key='&quot;points&quot;' value='Fantasy Points' />
+          <alias key='&quot;rec_td_pts&quot;' value='Receiving Touchdown Points' />
+          <alias key='&quot;rec_yd_pts&quot;' value='Receiving Yard Points' />
+          <alias key='&quot;receptions&quot;' value='Receptions' />
+          <alias key='&quot;rush_td_pts&quot;' value='Rushing Touchdown Points' />
+          <alias key='&quot;rush_yd_pts&quot;' value='Rushing Yard Points' />
+        </aliases>
+        <members>
+          <member alias='Fantasy Points' value='&quot;points&quot;' />
+          <member alias='Rushing Yard Points' value='&quot;rush_yd_pts&quot;' />
+          <member alias='Rushing Touchdown Points' value='&quot;rush_td_pts&quot;' />
+          <member alias='Receptions' value='&quot;receptions&quot;' />
+          <member alias='Receiving Yard Points' value='&quot;rec_yd_pts&quot;' />
+          <member alias='Receiving Touchdown Points' value='&quot;rec_td_pts&quot;' />
+          <member alias='Fumbles' value='&quot;fumbles&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='qb_fantasy_table' inline='true' name='federated.0ywt3t71bkaor515a1xs113bc2ko' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='qb_fantasy_table' name='textscan.02ujtz71od7zf01dg9vs0118o469'>
+            <connection class='textscan' directory='C:/Users/Grant/OneDrive/Data Analytics/Personal Projects/Fantasy Football 25 Season/tableau/final_tables' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.02ujtz71od7zf01dg9vs0118o469' name='qb_fantasy_table.csv' table='[qb_fantasy_table#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='games' ordinal='0' />
+            <column datatype='string' name='player' ordinal='1' />
+            <column datatype='string' name='position' ordinal='2' />
+            <column datatype='string' name='team' ordinal='3' />
+            <column datatype='real' name='points' ordinal='4' />
+            <column datatype='real' name='attempts' ordinal='5' />
+            <column datatype='real' name='pts_per_attempt' ordinal='6' />
+            <column datatype='real' name='pass_yd_pts' ordinal='7' />
+            <column datatype='real' name='pass_td_pts' ordinal='8' />
+            <column datatype='real' name='rush_yd_pts' ordinal='9' />
+            <column datatype='real' name='rush_td_pts' ordinal='10' />
+            <column datatype='real' name='interceptions' ordinal='11' />
+            <column datatype='real' name='fumbles' ordinal='12' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>games</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[games]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>games</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_78F72A9980534A02882C6F760181CB02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>player</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[qb_fantasy_table.csv_78F72A9980534A02882C6F760181CB02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>position</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[position]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>position</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[qb_fantasy_table.csv_78F72A9980534A02882C6F760181CB02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>team</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[qb_fantasy_table.csv_78F72A9980534A02882C6F760181CB02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>points</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[points]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>points</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_78F72A9980534A02882C6F760181CB02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attempts</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[attempts]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>attempts</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_78F72A9980534A02882C6F760181CB02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pts_per_attempt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pts_per_attempt]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>pts_per_attempt</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_78F72A9980534A02882C6F760181CB02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pass_yd_pts</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pass_yd_pts]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>pass_yd_pts</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_78F72A9980534A02882C6F760181CB02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pass_td_pts</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pass_td_pts]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>pass_td_pts</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_78F72A9980534A02882C6F760181CB02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rush_yd_pts</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rush_yd_pts]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>rush_yd_pts</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_78F72A9980534A02882C6F760181CB02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rush_td_pts</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rush_td_pts]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>rush_td_pts</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_78F72A9980534A02882C6F760181CB02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>interceptions</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[interceptions]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>interceptions</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_78F72A9980534A02882C6F760181CB02]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fumbles</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fumbles]</local-name>
+            <parent-name>[qb_fantasy_table.csv]</parent-name>
+            <remote-alias>fumbles</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[qb_fantasy_table.csv_78F72A9980534A02882C6F760181CB02]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Fantasy Points per Game' datatype='real' name='[Calculation_0957438522617862]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[points]/[games]' />
+      </column>
+      <column caption='Pass Yards per Game' datatype='real' name='[Calculation_0957438522699783]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([pass_yd_pts]*25)/[games]' />
+      </column>
+      <column caption='Touchdowns per Game' datatype='real' name='[Calculation_0957438522867720]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([pass_td_pts]/6)/[games]' />
+      </column>
+      <column caption='Interceptions per Game' datatype='real' name='[Calculation_0957438522916873]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[interceptions]/[games]' />
+      </column>
+      <column caption='Top Player' datatype='string' name='[Calculation_0957438527393805]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='{ FIXED : MAX(&#13;&#10;    IF [Calculation_2041281859358725] = { FIXED : MAX([Calculation_2041281859358725]) } &#13;&#10;    THEN [player] END &#13;&#10;) }' />
+      </column>
+      <column caption='Turnovers per Game' datatype='real' name='[Calculation_0957438553985040]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([fumbles]+[interceptions])/[games]' />
+      </column>
+      <column caption='Turnovers' datatype='real' name='[Calculation_0957438565281812]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([fumbles]+[interceptions])*2' />
+      </column>
+      <column caption='QB Stats' datatype='real' name='[Calculation_2041281859358725]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 2041281858002944]&#13;&#10;    WHEN &apos;points&apos;&#13;&#10;    THEN [points]&#13;&#10;    WHEN &apos;pass_yd_pts&apos;&#13;&#10;    THEN [pass_yd_pts]&#13;&#10;    WHEN &apos;pass_td_pts&apos;&#13;&#10;    THEN [pass_td_pts]&#13;&#10;    WHEN &apos;rush_yd_pts&apos;&#13;&#10;    THEN [rush_yd_pts]&#13;&#10;    WHEN &apos;rush_td_pts&apos;&#13;&#10;    THEN [rush_td_pts]&#13;&#10;    WHEN &apos;interceptions&apos;&#13;&#10;    THEN [interceptions]&#13;&#10;    WHEN &apos;fumbles&apos;&#13;&#10;    THEN [fumbles]&#13;&#10;END' />
+      </column>
+      <column caption='Total Points' datatype='real' name='[Calculation_2041281868734477]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[pass_td_pts]+[pass_yd_pts]+[rush_td_pts]+[rush_yd_pts]-[Calculation_0957438565281812]' />
+      </column>
+      <column caption='Rush Yards per Game ' datatype='real' name='[Yard Points per Game (copy)_0957438538989583]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([rush_yd_pts]*10)/[games]' />
+      </column>
+      <column caption='qb_fantasy_table.csv' datatype='table' name='[__tableau_internal_object_id__].[qb_fantasy_table.csv_78F72A9980534A02882C6F760181CB02]' role='measure' type='quantitative' />
+      <column caption='Attempts' datatype='real' name='[attempts]' role='measure' type='quantitative' />
+      <column caption='Fumbles' datatype='real' name='[fumbles]' role='measure' type='quantitative' />
+      <column caption='Games' datatype='integer' name='[games]' role='measure' type='quantitative' />
+      <column caption='Interceptions' datatype='real' name='[interceptions]' role='measure' type='quantitative' />
+      <column caption='Pass TDs' datatype='real' name='[pass_td_pts]' role='measure' type='quantitative' />
+      <column caption='Pass Yards' datatype='real' name='[pass_yd_pts]' role='measure' type='quantitative' />
+      <column caption='Player' datatype='string' name='[player]' role='dimension' type='nominal' />
+      <column caption='Points' datatype='real' name='[points]' role='measure' type='quantitative' />
+      <column caption='Position' datatype='string' name='[position]' role='dimension' type='nominal' />
+      <column caption='Pts Per Attempt' datatype='real' name='[pts_per_attempt]' role='measure' type='quantitative' />
+      <column caption='Rush TDs' datatype='real' name='[rush_td_pts]' role='measure' type='quantitative' />
+      <column caption='Rush Yards' datatype='real' name='[rush_yd_pts]' role='measure' type='quantitative' />
+      <column caption='Team' datatype='string' name='[team]' role='dimension' type='nominal' />
+      <column-instance column='[Calculation_0957438553985040]' derivation='Sum' name='[sum:Calculation_0957438553985040:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_2041281859358725]' derivation='Sum' name='[sum:Calculation_2041281859358725:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[fumbles]' derivation='Sum' name='[sum:fumbles:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[interceptions]' derivation='Sum' name='[sum:interceptions:qk]' pivot='key' type='quantitative' />
+      <group caption='Action (Player)' hidden='true' name='[Action (Player)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[player]' />
+        </groupfilter>
+      </group>
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Grant/AppData/Local/Temp/TableauTemp/#TableauTemp_0j21k6y1uwfanq14k6kze017g6hi.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/27/2026 12:39:21 AM' username=''>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>games</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[games]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>games</remote-alias>
+              <ordinal>0</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>player</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[player]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>player</remote-alias>
+              <ordinal>1</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>position</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[position]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>position</remote-alias>
+              <ordinal>2</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>team</remote-alias>
+              <ordinal>3</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>points</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[points]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>points</remote-alias>
+              <ordinal>4</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>attempts</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[attempts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>attempts</remote-alias>
+              <ordinal>5</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>30</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pts_per_attempt</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pts_per_attempt]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pts_per_attempt</remote-alias>
+              <ordinal>6</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pass_yd_pts</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pass_yd_pts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pass_yd_pts</remote-alias>
+              <ordinal>7</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pass_td_pts</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pass_td_pts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pass_td_pts</remote-alias>
+              <ordinal>8</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rush_yd_pts</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rush_yd_pts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rush_yd_pts</remote-alias>
+              <ordinal>9</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rush_td_pts</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rush_td_pts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rush_td_pts</remote-alias>
+              <ordinal>10</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>interceptions</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[interceptions]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>interceptions</remote-alias>
+              <ordinal>11</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fumbles</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fumbles]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fumbles</remote-alias>
+              <ordinal>12</ordinal>
+              <family>qb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout common-percentage='0.560037' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.439963' show-structure='true' user-set-layout-v2='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0ywt3t71bkaor515a1xs113bc2ko]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0ywt3t71bkaor515a1xs113bc2ko].[sum:Calculation_0957438553985040:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0ywt3t71bkaor515a1xs113bc2ko].[sum:interceptions:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0ywt3t71bkaor515a1xs113bc2ko].[sum:fumbles:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0ywt3t71bkaor515a1xs113bc2ko].[sum:Calculation_2041281859358725:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column alias='Fantasy Points' caption='QB Stat Filter' datatype='string' name='[Parameter 2041281858002944]' param-domain-type='list' role='measure' type='nominal' value='&quot;points&quot;'>
+          <calculation class='tableau' formula='&quot;points&quot;' />
+          <aliases>
+            <alias key='&quot;fumbles&quot;' value='Fumbles' />
+            <alias key='&quot;interceptions&quot;' value='Interceptions' />
+            <alias key='&quot;pass_td_pts&quot;' value='Passing Touchdown Points' />
+            <alias key='&quot;pass_yd_pts&quot;' value='Passing Yard Points' />
+            <alias key='&quot;points&quot;' value='Fantasy Points' />
+            <alias key='&quot;rush_td_pts&quot;' value='Rushing Touchdown Points' />
+            <alias key='&quot;rush_yd_pts&quot;' value='Rushing Yard Points' />
+          </aliases>
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='qb_fantasy_table.csv' id='qb_fantasy_table.csv_78F72A9980534A02882C6F760181CB02'>
+            <properties context=''>
+              <relation connection='textscan.02ujtz71od7zf01dg9vs0118o469' name='qb_fantasy_table.csv' table='[qb_fantasy_table#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='games' ordinal='0' />
+                  <column datatype='string' name='player' ordinal='1' />
+                  <column datatype='string' name='position' ordinal='2' />
+                  <column datatype='string' name='team' ordinal='3' />
+                  <column datatype='real' name='points' ordinal='4' />
+                  <column datatype='real' name='attempts' ordinal='5' />
+                  <column datatype='real' name='pts_per_attempt' ordinal='6' />
+                  <column datatype='real' name='pass_yd_pts' ordinal='7' />
+                  <column datatype='real' name='pass_td_pts' ordinal='8' />
+                  <column datatype='real' name='rush_yd_pts' ordinal='9' />
+                  <column datatype='real' name='rush_td_pts' ordinal='10' />
+                  <column datatype='real' name='interceptions' ordinal='11' />
+                  <column datatype='real' name='fumbles' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='rb_fantasy_table' inline='true' name='federated.1x8ydlr1e81pby16cwqvf0ql2tha' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='rb_fantasy_table' name='textscan.1ulqhhj0f4iick1b8j39j1c0eml3'>
+            <connection class='textscan' directory='C:/Users/Grant/OneDrive/Data Analytics/Personal Projects/Fantasy Football 25 Season/tableau/final_tables' filename='rb_fantasy_table.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1ulqhhj0f4iick1b8j39j1c0eml3' name='rb_fantasy_table.csv' table='[rb_fantasy_table#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='games' ordinal='0' />
+            <column datatype='string' name='player' ordinal='1' />
+            <column datatype='string' name='position' ordinal='2' />
+            <column datatype='string' name='team' ordinal='3' />
+            <column datatype='real' name='points' ordinal='4' />
+            <column datatype='real' name='pts_per_attempt' ordinal='5' />
+            <column datatype='real' name='rush_attempts' ordinal='6' />
+            <column datatype='real' name='rush_ypa' ordinal='7' />
+            <column datatype='real' name='rush_yd_pts' ordinal='8' />
+            <column datatype='real' name='rush_td_pts' ordinal='9' />
+            <column datatype='real' name='receptions' ordinal='10' />
+            <column datatype='real' name='rec_yd_pts' ordinal='11' />
+            <column datatype='real' name='rec_td_pts' ordinal='12' />
+            <column datatype='real' name='fumbles' ordinal='13' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[rb_fantasy_table.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>games</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[games]</local-name>
+            <parent-name>[rb_fantasy_table.csv]</parent-name>
+            <remote-alias>games</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player]</local-name>
+            <parent-name>[rb_fantasy_table.csv]</parent-name>
+            <remote-alias>player</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>position</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[position]</local-name>
+            <parent-name>[rb_fantasy_table.csv]</parent-name>
+            <remote-alias>position</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team]</local-name>
+            <parent-name>[rb_fantasy_table.csv]</parent-name>
+            <remote-alias>team</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>points</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[points]</local-name>
+            <parent-name>[rb_fantasy_table.csv]</parent-name>
+            <remote-alias>points</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pts_per_attempt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pts_per_attempt]</local-name>
+            <parent-name>[rb_fantasy_table.csv]</parent-name>
+            <remote-alias>pts_per_attempt</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rush_attempts</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rush_attempts]</local-name>
+            <parent-name>[rb_fantasy_table.csv]</parent-name>
+            <remote-alias>rush_attempts</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rush_ypa</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rush_ypa]</local-name>
+            <parent-name>[rb_fantasy_table.csv]</parent-name>
+            <remote-alias>rush_ypa</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rush_yd_pts</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rush_yd_pts]</local-name>
+            <parent-name>[rb_fantasy_table.csv]</parent-name>
+            <remote-alias>rush_yd_pts</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rush_td_pts</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rush_td_pts]</local-name>
+            <parent-name>[rb_fantasy_table.csv]</parent-name>
+            <remote-alias>rush_td_pts</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>receptions</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[receptions]</local-name>
+            <parent-name>[rb_fantasy_table.csv]</parent-name>
+            <remote-alias>receptions</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rec_yd_pts</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rec_yd_pts]</local-name>
+            <parent-name>[rb_fantasy_table.csv]</parent-name>
+            <remote-alias>rec_yd_pts</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rec_td_pts</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rec_td_pts]</local-name>
+            <parent-name>[rb_fantasy_table.csv]</parent-name>
+            <remote-alias>rec_td_pts</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fumbles</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fumbles]</local-name>
+            <parent-name>[rb_fantasy_table.csv]</parent-name>
+            <remote-alias>fumbles</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Rush Yards per Game' datatype='real' name='[Calculation_1081683666702336]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([rush_yd_pts]*10)/[games]' />
+      </column>
+      <column caption='Rush TD per Game' datatype='real' name='[Calculation_1081683666960385]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([rush_td_pts]/6)/[games]' />
+      </column>
+      <column caption='Rec Yards per Game' datatype='real' name='[Calculation_1081683667951618]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([rec_yd_pts]*10)/[games]' />
+      </column>
+      <column caption='Rec TDs per Game' datatype='real' name='[Calculation_1081683668070403]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([rec_td_pts]/6)/[games]' />
+      </column>
+      <column caption='RB Stats' datatype='real' name='[Calculation_1081683668602884]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[QB Stat Filter (copy)_2041281858613249]&#13;&#10;    WHEN &apos;points&apos;&#13;&#10;    THEN [points]&#13;&#10;    WHEN &apos;rush_attempts&apos;&#13;&#10;    THEN [rush_attempts]&#13;&#10;    WHEN &apos;rush_yd_pts&apos;&#13;&#10;    THEN [rush_yd_pts]&#13;&#10;    WHEN &apos;rush_td_pts&apos;&#13;&#10;    THEN [rush_td_pts]&#13;&#10;    WHEN &apos;receptions&apos;&#13;&#10;    THEN [receptions]&#13;&#10;    WHEN &apos;rec_yd_pts&apos;&#13;&#10;    THEN [rec_yd_pts]&#13;&#10;    WHEN &apos;rec_td_pts&apos;&#13;&#10;    THEN [rec_td_pts]&#13;&#10;    WHEN &apos;fumbles&apos;&#13;&#10;    THEN [fumbles]&#13;&#10;END' />
+      </column>
+      <column caption='Top/Bottom Filter' datatype='boolean' name='[Calculation_1081683670204424]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF [Parameters].[QB Stat Filter (copy)_2041281858613249] = &quot;fumbles&quot;&#13;&#10;    THEN RANK(SUM([fumbles]), &apos;asc&apos;) &lt;= 30&#13;&#10;ELSE&#13;&#10;    RANK(SUM([Calculation_1081683668602884]), &apos;desc&apos;) &lt;= 30&#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Sort Rank' datatype='integer' name='[Calculation_1081683674099721]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[QB Stat Filter (copy)_2041281858613249] = &quot;fumbles&quot; THEN&#13;&#10;    RANK(SUM([fumbles]), &apos;desc&apos;)&#13;&#10;ELSE&#13;&#10;    RANK(SUM([Calculation_1081683668602884]), &apos;asc&apos;)&#13;&#10;END'>
+          <table-calc ordering-field='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[player]' ordering-type='Field' />
+        </calculation>
+      </column>
+      <column caption='Rec Ypc' datatype='real' name='[Calculation_1081683681976336]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([rec_yd_pts]*10)/[receptions]' />
+      </column>
+      <column caption='RB Scatter Plot Stats' datatype='real' name='[RB Stats (copy)_1081683678978061]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[RB Stat Filter (copy)_1081683678785547]&#13;&#10;    WHEN &apos;points&apos;&#13;&#10;    THEN [points]&#13;&#10;    WHEN &apos;rush_attempts&apos;&#13;&#10;    THEN [rush_attempts]&#13;&#10;    WHEN &apos;rush_yd_pts&apos;&#13;&#10;    THEN [rush_yd_pts]&#13;&#10;    WHEN &apos;rush_td_pts&apos;&#13;&#10;    THEN [rush_td_pts]&#13;&#10;    WHEN &apos;receptions&apos;&#13;&#10;    THEN [receptions]&#13;&#10;    WHEN &apos;rec_yd_pts&apos;&#13;&#10;    THEN [rec_yd_pts]&#13;&#10;    WHEN &apos;rec_td_pts&apos;&#13;&#10;    THEN [rec_td_pts]&#13;&#10;    WHEN &apos;fumbles&apos;&#13;&#10;    THEN [fumbles]&#13;&#10;END' />
+      </column>
+      <column caption='rb_fantasy_table.csv' datatype='table' name='[__tableau_internal_object_id__].[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]' role='measure' type='quantitative' />
+      <column caption='Fumbles' datatype='real' name='[fumbles]' role='measure' type='quantitative' />
+      <column caption='Games' datatype='integer' name='[games]' role='measure' type='quantitative' />
+      <column caption='Player' datatype='string' name='[player]' role='dimension' type='nominal' />
+      <column caption='Points' datatype='real' name='[points]' role='measure' type='quantitative' />
+      <column caption='Position' datatype='string' name='[position]' role='dimension' type='nominal' />
+      <column caption='Pts Per Attempt' datatype='real' name='[pts_per_attempt]' role='measure' type='quantitative' />
+      <column caption='Rec Td Pts' datatype='real' name='[rec_td_pts]' role='measure' type='quantitative' />
+      <column caption='Rec Yd Pts' datatype='real' name='[rec_yd_pts]' role='measure' type='quantitative' />
+      <column caption='Receptions' datatype='real' name='[receptions]' role='measure' type='quantitative' />
+      <column caption='Rush Attempts' datatype='real' name='[rush_attempts]' role='measure' type='quantitative' />
+      <column caption='Rush Td Pts' datatype='real' name='[rush_td_pts]' role='measure' type='quantitative' />
+      <column caption='Rush Yd Pts' datatype='real' name='[rush_yd_pts]' role='measure' type='quantitative' />
+      <column caption='Rush Ypa' datatype='real' name='[rush_ypa]' role='measure' type='quantitative' />
+      <column caption='Team' datatype='string' name='[team]' role='dimension' type='nominal' />
+      <group caption='Action (Player)' hidden='true' name='[Action (Player)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[player]' />
+        </groupfilter>
+      </group>
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Grant/AppData/Local/Temp/TableauTemp/#TableauTemp_18onny2169hv9g16imhnv1o6waja.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/28/2026 03:35:46 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>games</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[games]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>games</remote-alias>
+              <ordinal>0</ordinal>
+              <family>rb_fantasy_table.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>player</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[player]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>player</remote-alias>
+              <ordinal>1</ordinal>
+              <family>rb_fantasy_table.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>position</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[position]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>position</remote-alias>
+              <ordinal>2</ordinal>
+              <family>rb_fantasy_table.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>team</remote-alias>
+              <ordinal>3</ordinal>
+              <family>rb_fantasy_table.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>33</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>points</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[points]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>points</remote-alias>
+              <ordinal>4</ordinal>
+              <family>rb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pts_per_attempt</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pts_per_attempt]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pts_per_attempt</remote-alias>
+              <ordinal>5</ordinal>
+              <family>rb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>49</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rush_attempts</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rush_attempts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rush_attempts</remote-alias>
+              <ordinal>6</ordinal>
+              <family>rb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>60</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rush_ypa</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rush_ypa]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rush_ypa</remote-alias>
+              <ordinal>7</ordinal>
+              <family>rb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>56</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rush_yd_pts</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rush_yd_pts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rush_yd_pts</remote-alias>
+              <ordinal>8</ordinal>
+              <family>rb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rush_td_pts</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rush_td_pts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rush_td_pts</remote-alias>
+              <ordinal>9</ordinal>
+              <family>rb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>receptions</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[receptions]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>receptions</remote-alias>
+              <ordinal>10</ordinal>
+              <family>rb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>41</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rec_yd_pts</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rec_yd_pts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rec_yd_pts</remote-alias>
+              <ordinal>11</ordinal>
+              <family>rb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>59</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rec_td_pts</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rec_td_pts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rec_td_pts</remote-alias>
+              <ordinal>12</ordinal>
+              <family>rb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fumbles</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fumbles]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fumbles</remote-alias>
+              <ordinal>13</ordinal>
+              <family>rb_fantasy_table.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column alias='Fumbles' caption='RB Stat Filter' datatype='string' name='[QB Stat Filter (copy)_2041281858613249]' param-domain-type='list' role='measure' type='nominal' value='&quot;fumbles&quot;'>
+          <calculation class='tableau' formula='&quot;fumbles&quot;' />
+          <aliases>
+            <alias key='&quot;fumbles&quot;' value='Fumbles' />
+            <alias key='&quot;points&quot;' value='Fantasy Points' />
+            <alias key='&quot;rec_td_pts&quot;' value='Receiving Touchdown Points' />
+            <alias key='&quot;rec_yd_pts&quot;' value='Receiving Yard Points' />
+            <alias key='&quot;receptions&quot;' value='Receptions' />
+            <alias key='&quot;rush_attempts&quot;' value='Rush Attempts' />
+            <alias key='&quot;rush_td_pts&quot;' value='Rushing Touchdown Points' />
+            <alias key='&quot;rush_yd_pts&quot;' value='Rushing Yard Points' />
+          </aliases>
+        </column>
+        <column alias='Rushing Touchdown Points' caption='RB Scatter Plot Stat Filter' datatype='string' name='[RB Stat Filter (copy)_1081683678785547]' param-domain-type='list' role='measure' type='nominal' value='&quot;rush_td_pts&quot;'>
+          <calculation class='tableau' formula='&quot;rush_td_pts&quot;' />
+          <aliases>
+            <alias key='&quot;fumbles&quot;' value='Fumbles' />
+            <alias key='&quot;points&quot;' value='Fantasy Points' />
+            <alias key='&quot;rec_td_pts&quot;' value='Receiving Touchdown Points' />
+            <alias key='&quot;rec_yd_pts&quot;' value='Receiving Yard Points' />
+            <alias key='&quot;receptions&quot;' value='Receptions' />
+            <alias key='&quot;rush_td_pts&quot;' value='Rushing Touchdown Points' />
+            <alias key='&quot;rush_yd_pts&quot;' value='Rushing Yard Points' />
+          </aliases>
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='rb_fantasy_table.csv' id='rb_fantasy_table.csv_DF171F0B22CD49DABE53B3004291B04E'>
+            <properties context=''>
+              <relation connection='textscan.1ulqhhj0f4iick1b8j39j1c0eml3' name='rb_fantasy_table.csv' table='[rb_fantasy_table#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='games' ordinal='0' />
+                  <column datatype='string' name='player' ordinal='1' />
+                  <column datatype='string' name='position' ordinal='2' />
+                  <column datatype='string' name='team' ordinal='3' />
+                  <column datatype='real' name='points' ordinal='4' />
+                  <column datatype='real' name='pts_per_attempt' ordinal='5' />
+                  <column datatype='real' name='rush_attempts' ordinal='6' />
+                  <column datatype='real' name='rush_ypa' ordinal='7' />
+                  <column datatype='real' name='rush_yd_pts' ordinal='8' />
+                  <column datatype='real' name='rush_td_pts' ordinal='9' />
+                  <column datatype='real' name='receptions' ordinal='10' />
+                  <column datatype='real' name='rec_yd_pts' ordinal='11' />
+                  <column datatype='real' name='rec_td_pts' ordinal='12' />
+                  <column datatype='real' name='fumbles' ordinal='13' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Player Name Chooser' name='[Action1_6F00677C84A24710A658C43135A66955]'>
+      <activation type='on-select' />
+      <source dashboard='RB Dashboard' type='sheet' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='RB Dashboard' />
+      </command>
+    </action>
+    <action caption='Highlight Player' name='[Action2_98804DE8F7EF46218E43C3EEBAC5E6F8]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='RB Dashboard' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Player' />
+        <param name='target' value='RB Dashboard' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Player Information KPI&apos;s'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='rb_fantasy_table' name='federated.1x8ydlr1e81pby16cwqvf0ql2tha' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1x8ydlr1e81pby16cwqvf0ql2tha'>
+            <column caption='Rush Yards per Game' datatype='real' name='[Calculation_1081683666702336]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([rush_yd_pts]*10)/[games]' />
+            </column>
+            <column caption='Rush TD per Game' datatype='real' name='[Calculation_1081683666960385]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([rush_td_pts]/6)/[games]' />
+            </column>
+            <column caption='Rec Yards per Game' datatype='real' name='[Calculation_1081683667951618]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([rec_yd_pts]*10)/[games]' />
+            </column>
+            <column caption='Rec TDs per Game' datatype='real' name='[Calculation_1081683668070403]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([rec_td_pts]/6)/[games]' />
+            </column>
+            <column caption='Games' datatype='integer' name='[games]' role='measure' type='quantitative' />
+            <column-instance column='[player]' derivation='None' name='[none:player:nk]' pivot='key' type='nominal' />
+            <column caption='Player' datatype='string' name='[player]' role='dimension' type='nominal' />
+            <column caption='Points' datatype='real' name='[points]' role='measure' type='quantitative' />
+            <column caption='Rec Td Pts' datatype='real' name='[rec_td_pts]' role='measure' type='quantitative' />
+            <column caption='Rec Yd Pts' datatype='real' name='[rec_yd_pts]' role='measure' type='quantitative' />
+            <column caption='Rush Td Pts' datatype='real' name='[rush_td_pts]' role='measure' type='quantitative' />
+            <column caption='Rush Yd Pts' datatype='real' name='[rush_yd_pts]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1081683666702336]' derivation='Sum' name='[sum:Calculation_1081683666702336:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1081683666960385]' derivation='Sum' name='[sum:Calculation_1081683666960385:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1081683667951618]' derivation='Sum' name='[sum:Calculation_1081683667951618:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1081683668070403]' derivation='Sum' name='[sum:Calculation_1081683668070403:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[points]' derivation='Sum' name='[sum:points:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rec_td_pts]' derivation='Sum' name='[sum:rec_td_pts:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:points:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683666702336:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683666960385:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683667951618:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668070403:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:points:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683666702336:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683666960385:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683667951618:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668070403:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:rec_td_pts:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[Action (Player)]'>
+            <groupfilter function='member' level='[player]' member='&quot;Saquon Barkley&quot;' user:ui-action-filter='[Action1_6F00677C84A24710A658C43135A66955]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[none:player:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:points:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[:Measure Names]</column>
+            <column>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[Action (Player)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[none:player:nk]</rows>
+        <cols>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{205BD242-DE77-40F1-B3AB-050CE5E1C949}' />
+    </worksheet>
+    <worksheet name='Player Point Overview'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='rb_fantasy_table' name='federated.1x8ydlr1e81pby16cwqvf0ql2tha' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1x8ydlr1e81pby16cwqvf0ql2tha'>
+            <column-instance column='[player]' derivation='None' name='[none:player:nk]' pivot='key' type='nominal' />
+            <column caption='Player' datatype='string' name='[player]' role='dimension' type='nominal' />
+            <column caption='Rec Td Pts' datatype='real' name='[rec_td_pts]' role='measure' type='quantitative' />
+            <column caption='Rec Yd Pts' datatype='real' name='[rec_yd_pts]' role='measure' type='quantitative' />
+            <column caption='Receptions' datatype='real' name='[receptions]' role='measure' type='quantitative' />
+            <column caption='Rush Td Pts' datatype='real' name='[rush_td_pts]' role='measure' type='quantitative' />
+            <column caption='Rush Yd Pts' datatype='real' name='[rush_yd_pts]' role='measure' type='quantitative' />
+            <column-instance column='[rec_td_pts]' derivation='Sum' name='[sum:rec_td_pts:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rec_yd_pts]' derivation='Sum' name='[sum:rec_yd_pts:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[receptions]' derivation='Sum' name='[sum:receptions:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rush_td_pts]' derivation='Sum' name='[sum:rush_td_pts:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rush_yd_pts]' derivation='Sum' name='[sum:rush_yd_pts:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:rush_yd_pts:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:rush_td_pts:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:receptions:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:rec_yd_pts:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:rec_td_pts:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:rush_yd_pts:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:rush_td_pts:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:receptions:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:rec_yd_pts:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:rec_td_pts:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[Multiple Values]' palette='Red-Yellow' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[Multiple Values]' />
+              <text column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[:Measure Names]</rows>
+        <cols>([federated.1x8ydlr1e81pby16cwqvf0ql2tha].[none:player:nk] * [federated.1x8ydlr1e81pby16cwqvf0ql2tha].[Multiple Values])</cols>
+      </table>
+      <simple-id uuid='{2A63DC44-30C8-4E3C-804B-165748FCFD2F}' />
+    </worksheet>
+    <worksheet name='Player Stats'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='rb_fantasy_table' name='federated.1x8ydlr1e81pby16cwqvf0ql2tha' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column alias='Fumbles' caption='RB Stat Filter' datatype='string' name='[QB Stat Filter (copy)_2041281858613249]' param-domain-type='list' role='measure' type='nominal' value='&quot;fumbles&quot;'>
+              <calculation class='tableau' formula='&quot;fumbles&quot;' />
+              <aliases>
+                <alias key='&quot;fumbles&quot;' value='Fumbles' />
+                <alias key='&quot;points&quot;' value='Fantasy Points' />
+                <alias key='&quot;rec_td_pts&quot;' value='Receiving Touchdown Points' />
+                <alias key='&quot;rec_yd_pts&quot;' value='Receiving Yard Points' />
+                <alias key='&quot;receptions&quot;' value='Receptions' />
+                <alias key='&quot;rush_attempts&quot;' value='Rush Attempts' />
+                <alias key='&quot;rush_td_pts&quot;' value='Rushing Touchdown Points' />
+                <alias key='&quot;rush_yd_pts&quot;' value='Rushing Yard Points' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1x8ydlr1e81pby16cwqvf0ql2tha'>
+            <column caption='RB Stats' datatype='real' name='[Calculation_1081683668602884]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[QB Stat Filter (copy)_2041281858613249]&#13;&#10;    WHEN &apos;points&apos;&#13;&#10;    THEN [points]&#13;&#10;    WHEN &apos;rush_attempts&apos;&#13;&#10;    THEN [rush_attempts]&#13;&#10;    WHEN &apos;rush_yd_pts&apos;&#13;&#10;    THEN [rush_yd_pts]&#13;&#10;    WHEN &apos;rush_td_pts&apos;&#13;&#10;    THEN [rush_td_pts]&#13;&#10;    WHEN &apos;receptions&apos;&#13;&#10;    THEN [receptions]&#13;&#10;    WHEN &apos;rec_yd_pts&apos;&#13;&#10;    THEN [rec_yd_pts]&#13;&#10;    WHEN &apos;rec_td_pts&apos;&#13;&#10;    THEN [rec_td_pts]&#13;&#10;    WHEN &apos;fumbles&apos;&#13;&#10;    THEN [fumbles]&#13;&#10;END' />
+            </column>
+            <column caption='Top/Bottom Filter' datatype='boolean' name='[Calculation_1081683670204424]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF [Parameters].[QB Stat Filter (copy)_2041281858613249] = &quot;fumbles&quot;&#13;&#10;    THEN RANK(SUM([fumbles]), &apos;asc&apos;) &lt;= 30&#13;&#10;ELSE&#13;&#10;    RANK(SUM([Calculation_1081683668602884]), &apos;desc&apos;) &lt;= 30&#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Fumbles' datatype='real' name='[fumbles]' role='measure' type='quantitative' />
+            <column-instance column='[player]' derivation='None' name='[none:player:nk]' pivot='key' type='nominal' />
+            <column caption='Player' datatype='string' name='[player]' role='dimension' type='nominal' />
+            <column caption='Points' datatype='real' name='[points]' role='measure' type='quantitative' />
+            <column caption='Rec Td Pts' datatype='real' name='[rec_td_pts]' role='measure' type='quantitative' />
+            <column caption='Rec Yd Pts' datatype='real' name='[rec_yd_pts]' role='measure' type='quantitative' />
+            <column caption='Receptions' datatype='real' name='[receptions]' role='measure' type='quantitative' />
+            <column caption='Rush Attempts' datatype='real' name='[rush_attempts]' role='measure' type='quantitative' />
+            <column caption='Rush Td Pts' datatype='real' name='[rush_td_pts]' role='measure' type='quantitative' />
+            <column caption='Rush Yd Pts' datatype='real' name='[rush_yd_pts]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1081683668602884]' derivation='Sum' name='[sum:Calculation_1081683668602884:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[points]' derivation='Sum' name='[sum:points:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1081683670204424]' derivation='User' name='[usr:Calculation_1081683670204424:nk:1]' pivot='key' type='nominal'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[none:player:nk]'>
+            <groupfilter function='level-members' level='[none:player:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <computed-sort column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[none:player:nk]' direction='DESC' using='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]' />
+          <filter class='quantitative' column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]' included-values='in-range' />
+          <filter class='quantitative' column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:points:qk]' included-values='in-range' />
+          <filter class='categorical' column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[usr:Calculation_1081683670204424:nk:1]'>
+            <groupfilter function='member' level='[usr:Calculation_1081683670204424:nk:1]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[usr:Calculation_1081683670204424:nk:1]</column>
+            <column>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:points:qk]</column>
+            <column>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]</column>
+            <column>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[none:player:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:points:qk]' palette='Red-Yellow' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:points:qk]' />
+              <text column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[none:player:nk]</rows>
+        <cols>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]</cols>
+      </table>
+      <simple-id uuid='{93827D58-A702-4275-9185-FC65B93BE6D4}' />
+    </worksheet>
+    <worksheet name='Rec and Rush Per yard'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='rb_fantasy_table' name='federated.1x8ydlr1e81pby16cwqvf0ql2tha' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column alias='Fumbles' caption='RB Stat Filter' datatype='string' name='[QB Stat Filter (copy)_2041281858613249]' param-domain-type='list' role='measure' type='nominal' value='&quot;fumbles&quot;'>
+              <calculation class='tableau' formula='&quot;fumbles&quot;' />
+              <aliases>
+                <alias key='&quot;fumbles&quot;' value='Fumbles' />
+                <alias key='&quot;points&quot;' value='Fantasy Points' />
+                <alias key='&quot;rec_td_pts&quot;' value='Receiving Touchdown Points' />
+                <alias key='&quot;rec_yd_pts&quot;' value='Receiving Yard Points' />
+                <alias key='&quot;receptions&quot;' value='Receptions' />
+                <alias key='&quot;rush_attempts&quot;' value='Rush Attempts' />
+                <alias key='&quot;rush_td_pts&quot;' value='Rushing Touchdown Points' />
+                <alias key='&quot;rush_yd_pts&quot;' value='Rushing Yard Points' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1x8ydlr1e81pby16cwqvf0ql2tha'>
+            <column caption='RB Stats' datatype='real' name='[Calculation_1081683668602884]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[QB Stat Filter (copy)_2041281858613249]&#13;&#10;    WHEN &apos;points&apos;&#13;&#10;    THEN [points]&#13;&#10;    WHEN &apos;rush_attempts&apos;&#13;&#10;    THEN [rush_attempts]&#13;&#10;    WHEN &apos;rush_yd_pts&apos;&#13;&#10;    THEN [rush_yd_pts]&#13;&#10;    WHEN &apos;rush_td_pts&apos;&#13;&#10;    THEN [rush_td_pts]&#13;&#10;    WHEN &apos;receptions&apos;&#13;&#10;    THEN [receptions]&#13;&#10;    WHEN &apos;rec_yd_pts&apos;&#13;&#10;    THEN [rec_yd_pts]&#13;&#10;    WHEN &apos;rec_td_pts&apos;&#13;&#10;    THEN [rec_td_pts]&#13;&#10;    WHEN &apos;fumbles&apos;&#13;&#10;    THEN [fumbles]&#13;&#10;END' />
+            </column>
+            <column caption='Rec Ypc' datatype='real' name='[Calculation_1081683681976336]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([rec_yd_pts]*10)/[receptions]' />
+            </column>
+            <column caption='Fumbles' datatype='real' name='[fumbles]' role='measure' type='quantitative' />
+            <column-instance column='[player]' derivation='None' name='[none:player:nk]' pivot='key' type='nominal' />
+            <column caption='Player' datatype='string' name='[player]' role='dimension' type='nominal' />
+            <column caption='Points' datatype='real' name='[points]' role='measure' type='quantitative' />
+            <column caption='Rec Td Pts' datatype='real' name='[rec_td_pts]' role='measure' type='quantitative' />
+            <column caption='Rec Yd Pts' datatype='real' name='[rec_yd_pts]' role='measure' type='quantitative' />
+            <column caption='Receptions' datatype='real' name='[receptions]' role='measure' type='quantitative' />
+            <column caption='Rush Attempts' datatype='real' name='[rush_attempts]' role='measure' type='quantitative' />
+            <column caption='Rush Td Pts' datatype='real' name='[rush_td_pts]' role='measure' type='quantitative' />
+            <column caption='Rush Yd Pts' datatype='real' name='[rush_yd_pts]' role='measure' type='quantitative' />
+            <column caption='Rush Ypa' datatype='real' name='[rush_ypa]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1081683668602884]' derivation='Sum' name='[sum:Calculation_1081683668602884:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1081683681976336]' derivation='Sum' name='[sum:Calculation_1081683681976336:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rush_ypa]' derivation='Sum' name='[sum:rush_ypa:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]' palette='Red-Yellow' type='interpolated' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='color' value='#ffffff' />
+            <format attr='font-size' field='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]' id='legend-size' value='10' />
+            <format attr='font-size' field='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]' id='legend-color' value='10' />
+            <format attr='col-width' field='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]' value='120' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-size' value='12' />
+            <format attr='color' value='#ffffff' />
+            <format attr='font-size' field='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]' id='legend-color' value='10' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]' />
+              <lod column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[none:player:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='shape' value=':filled/circle' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683681976336:qk]</rows>
+        <cols>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:rush_ypa:qk]</cols>
+      </table>
+      <simple-id uuid='{2E2EA09E-30E4-41AF-BF37-93674945836A}' />
+    </worksheet>
+    <worksheet name='Stat Comparisons'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='rb_fantasy_table' name='federated.1x8ydlr1e81pby16cwqvf0ql2tha' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column alias='Fumbles' caption='RB Stat Filter' datatype='string' name='[QB Stat Filter (copy)_2041281858613249]' param-domain-type='list' role='measure' type='nominal' value='&quot;fumbles&quot;'>
+              <calculation class='tableau' formula='&quot;fumbles&quot;' />
+              <aliases>
+                <alias key='&quot;fumbles&quot;' value='Fumbles' />
+                <alias key='&quot;points&quot;' value='Fantasy Points' />
+                <alias key='&quot;rec_td_pts&quot;' value='Receiving Touchdown Points' />
+                <alias key='&quot;rec_yd_pts&quot;' value='Receiving Yard Points' />
+                <alias key='&quot;receptions&quot;' value='Receptions' />
+                <alias key='&quot;rush_attempts&quot;' value='Rush Attempts' />
+                <alias key='&quot;rush_td_pts&quot;' value='Rushing Touchdown Points' />
+                <alias key='&quot;rush_yd_pts&quot;' value='Rushing Yard Points' />
+              </aliases>
+            </column>
+            <column alias='Rushing Touchdown Points' caption='RB Scatter Plot Stat Filter' datatype='string' name='[RB Stat Filter (copy)_1081683678785547]' param-domain-type='list' role='measure' type='nominal' value='&quot;rush_td_pts&quot;'>
+              <calculation class='tableau' formula='&quot;rush_td_pts&quot;' />
+              <aliases>
+                <alias key='&quot;fumbles&quot;' value='Fumbles' />
+                <alias key='&quot;points&quot;' value='Fantasy Points' />
+                <alias key='&quot;rec_td_pts&quot;' value='Receiving Touchdown Points' />
+                <alias key='&quot;rec_yd_pts&quot;' value='Receiving Yard Points' />
+                <alias key='&quot;receptions&quot;' value='Receptions' />
+                <alias key='&quot;rush_td_pts&quot;' value='Rushing Touchdown Points' />
+                <alias key='&quot;rush_yd_pts&quot;' value='Rushing Yard Points' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1x8ydlr1e81pby16cwqvf0ql2tha'>
+            <column caption='RB Stats' datatype='real' name='[Calculation_1081683668602884]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[QB Stat Filter (copy)_2041281858613249]&#13;&#10;    WHEN &apos;points&apos;&#13;&#10;    THEN [points]&#13;&#10;    WHEN &apos;rush_attempts&apos;&#13;&#10;    THEN [rush_attempts]&#13;&#10;    WHEN &apos;rush_yd_pts&apos;&#13;&#10;    THEN [rush_yd_pts]&#13;&#10;    WHEN &apos;rush_td_pts&apos;&#13;&#10;    THEN [rush_td_pts]&#13;&#10;    WHEN &apos;receptions&apos;&#13;&#10;    THEN [receptions]&#13;&#10;    WHEN &apos;rec_yd_pts&apos;&#13;&#10;    THEN [rec_yd_pts]&#13;&#10;    WHEN &apos;rec_td_pts&apos;&#13;&#10;    THEN [rec_td_pts]&#13;&#10;    WHEN &apos;fumbles&apos;&#13;&#10;    THEN [fumbles]&#13;&#10;END' />
+            </column>
+            <column caption='RB Scatter Plot Stats' datatype='real' name='[RB Stats (copy)_1081683678978061]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[RB Stat Filter (copy)_1081683678785547]&#13;&#10;    WHEN &apos;points&apos;&#13;&#10;    THEN [points]&#13;&#10;    WHEN &apos;rush_attempts&apos;&#13;&#10;    THEN [rush_attempts]&#13;&#10;    WHEN &apos;rush_yd_pts&apos;&#13;&#10;    THEN [rush_yd_pts]&#13;&#10;    WHEN &apos;rush_td_pts&apos;&#13;&#10;    THEN [rush_td_pts]&#13;&#10;    WHEN &apos;receptions&apos;&#13;&#10;    THEN [receptions]&#13;&#10;    WHEN &apos;rec_yd_pts&apos;&#13;&#10;    THEN [rec_yd_pts]&#13;&#10;    WHEN &apos;rec_td_pts&apos;&#13;&#10;    THEN [rec_td_pts]&#13;&#10;    WHEN &apos;fumbles&apos;&#13;&#10;    THEN [fumbles]&#13;&#10;END' />
+            </column>
+            <column caption='Fumbles' datatype='real' name='[fumbles]' role='measure' type='quantitative' />
+            <column-instance column='[player]' derivation='None' name='[none:player:nk]' pivot='key' type='nominal' />
+            <column caption='Player' datatype='string' name='[player]' role='dimension' type='nominal' />
+            <column caption='Points' datatype='real' name='[points]' role='measure' type='quantitative' />
+            <column caption='Rec Td Pts' datatype='real' name='[rec_td_pts]' role='measure' type='quantitative' />
+            <column caption='Rec Yd Pts' datatype='real' name='[rec_yd_pts]' role='measure' type='quantitative' />
+            <column caption='Receptions' datatype='real' name='[receptions]' role='measure' type='quantitative' />
+            <column caption='Rush Attempts' datatype='real' name='[rush_attempts]' role='measure' type='quantitative' />
+            <column caption='Rush Td Pts' datatype='real' name='[rush_td_pts]' role='measure' type='quantitative' />
+            <column caption='Rush Yd Pts' datatype='real' name='[rush_yd_pts]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1081683668602884]' derivation='Sum' name='[sum:Calculation_1081683668602884:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[RB Stats (copy)_1081683678978061]' derivation='Sum' name='[sum:RB Stats (copy)_1081683678978061:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rush_attempts]' derivation='Sum' name='[sum:rush_attempts:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]' included-values='all' />
+          <filter class='quantitative' column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:RB Stats (copy)_1081683678978061:qk]' included-values='in-range' />
+          <slices>
+            <column>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:RB Stats (copy)_1081683678978061:qk]</column>
+            <column>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]' scope='rows' value='Fumbles' />
+            <format attr='title' class='0' field='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:RB Stats (copy)_1081683678978061:qk]' scope='cols' value='Rushing Touchdown Points' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]' palette='Red-Yellow' type='interpolated' />
+            <encoding attr='color' field='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:rush_attempts:qk]' palette='Red-Yellow' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:rush_attempts:qk]' />
+              <lod column='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[none:player:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#b80000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]</rows>
+        <cols>[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:RB Stats (copy)_1081683678978061:qk]</cols>
+      </table>
+      <simple-id uuid='{ADFC219E-BBD6-4653-9325-D824CFEE18BA}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='RB Dashboard'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/qb_dashboard/QBDashboard?rev=' id='132838823' path='/workbooks/qb_dashboard' revision='' />
+      <style>
+        <style-rule element='parameter-ctrl'>
+          <format attr='color' field='[Parameters].[Parameter 2041281858002944]' value='#ffffff' />
+          <format attr='font-size' field='[Parameters].[Parameter 2041281858002944]' value='13' />
+        </style-rule>
+        <style-rule element='parameter-ctrl-title'>
+          <format attr='font-size' field='[Parameters].[Parameter 2041281858002944]' value='13' />
+        </style-rule>
+      </style>
+      <size maxheight='1080' maxwidth='1920' minheight='1080' minwidth='1920' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='3' param='horz' type-v2='layout-flow' w='100000' x='0' y='0'>
+          <zone fixed-size='207' friendly-name='Dashboard Information' h='99444' id='7' is-fixed='true' param='vert' type-v2='layout-flow' w='11198' x='156' y='278'>
+            <zone fixed-size='814' friendly-name='Filters' h='75370' id='95' is-fixed='true' param='vert' type-v2='layout-flow' w='10574' x='468' y='833'>
+              <zone h='3334' id='100' type-v2='text' w='10574' x='468' y='833'>
+                <formatted-text>
+                  <run fontalignment='1' fontcolor='#ffffff' fontsize='15'>FILTERS</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone friendly-name='Legends' h='3241' id='96' param='vert' type-v2='layout-flow' w='10574' x='468' y='76203'>
+              <zone forceUpdate='true' h='3241' id='98' type-v2='text' w='10574' x='468' y='76203'>
+                <formatted-text>
+                  <run fontalignment='1' fontcolor='#ffffff' fontsize='14'>LEGENDS</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone-style>
+              <format attr='border-color' value='#b80000' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='2' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone friendly-name='Title and Data' h='99444' id='138' param='vert' type-v2='layout-flow' w='88490' x='11354' y='278'>
+            <zone fixed-size='80' friendly-name='Title' h='8148' id='140' is-fixed='true' param='vert' type-v2='layout-flow' w='88490' x='11354' y='278'>
+              <zone h='6945' id='151' type-v2='text' w='87866' x='11666' y='833'>
+                <formatted-text>
+                  <run fontcolor='#ffffff' fontsize='36'>DASHBOARD TITLE</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#b80000' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='2' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone fixed-size='436' friendly-name='Data Top' h='40370' id='141' is-fixed='true' param='horz' type-v2='layout-flow' w='88490' x='11354' y='8426'>
+              <zone h='40370' id='143' param='horz' type-v2='layout-flow' w='88490' x='11354' y='8426'>
+                <zone h='40370' id='145' param='horz' type-v2='layout-flow' w='44245' x='11354' y='8426'>
+                  <zone-style>
+                    <format attr='border-color' value='#b80000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='40370' id='146' param='horz' type-v2='layout-flow' w='44245' x='55599' y='8426'>
+                  <zone-style>
+                    <format attr='border-color' value='#b80000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+            <zone friendly-name='Data Bottom' h='50926' id='147' param='horz' type-v2='layout-flow' w='88490' x='11354' y='48796'>
+              <zone h='50926' id='149' param='horz' type-v2='layout-flow' w='44245' x='11354' y='48796'>
+                <zone-style>
+                  <format attr='border-color' value='#b80000' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='2' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='50926' id='150' param='horz' type-v2='layout-flow' w='44245' x='55599' y='48796'>
+                <zone-style>
+                  <format attr='border-color' value='#b80000' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='2' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#b80000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='3' />
+            <format attr='background-color' value='#000000' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='153' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98518' id='152' param='vert' type-v2='layout-flow' w='99166' x='417' y='741'>
+                <zone h='3334' id='100' type-v2='text' w='10574' x='468' y='833'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#ffffff' fontsize='15'>FILTERS</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6945' id='151' type-v2='text' w='87866' x='11666' y='833'>
+                  <formatted-text>
+                    <run fontcolor='#ffffff' fontsize='36'>DASHBOARD TITLE</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3241' id='98' type-v2='text' w='10574' x='468' y='76203'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#ffffff' fontsize='14'>LEGENDS</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{9836EF1F-9665-4DF3-8E5E-AEDA7BD51EE7}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='51'>
+    <window class='worksheet' name='Player Information KPI&apos;s'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{ED22B1C3-D369-4EAC-96F5-7219FD30612B}' />
+    </window>
+    <window class='worksheet' name='Player Stats'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[QB Stat Filter (copy)_2041281858613249]' type='parameter' />
+            <card pane-specification-id='4' param='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:points:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FF707E8A-687B-4B6A-8A7D-3C3507151223}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Player Point Overview'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[Multiple Values]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{AE8EA0EA-CA80-4AD6-91CC-7F747911590E}' />
+    </window>
+    <window class='worksheet' name='Stat Comparisons'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='list' param='[Parameters].[QB Stat Filter (copy)_2041281858613249]' type='parameter' />
+            <card mode='list' param='[Parameters].[RB Stat Filter (copy)_1081683678785547]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:rush_attempts:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F9109F51-9FFD-426A-98E2-B01C7B0B5FBC}' />
+    </window>
+    <window class='worksheet' name='Rec and Rush Per yard'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]' type='color' />
+            <card mode='compact' param='[Parameters].[QB Stat Filter (copy)_2041281858613249]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{65BA8491-5E75-4DA8-BFBA-3CF852C5CE8E}' />
+    </window>
+    <window class='dashboard' name='RB Dashboard'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{9EBA3F44-8454-4A95-814B-4B7CFCFFF51C}' />
+    </window>
+  </windows>
+  <datagraph>
+    <graph>
+      <properties>
+        <default-execution-subgraph-guid value='e3a5b85b-2045-4c40-ad03-4daef0606d96' />
+      </properties>
+      <node-execution-subgraphs>
+        <pair execution-subgraph-guid='e3a5b85b-2045-4c40-ad03-4daef0606d96' node-guid='7496fbe7-fcad-4f5e-a56e-580e4bba883d' />
+        <pair execution-subgraph-guid='e3a5b85b-2045-4c40-ad03-4daef0606d96' node-guid='1023aa37-a92d-4f0e-909e-ad756b0443f3' />
+        <pair execution-subgraph-guid='e3a5b85b-2045-4c40-ad03-4daef0606d96' node-guid='7526dfad-1dc0-407f-91a7-d18d890afc2c' />
+        <pair execution-subgraph-guid='e3a5b85b-2045-4c40-ad03-4daef0606d96' node-guid='bcf24e27-dcc3-48ad-bd2a-2ee2a11584bc' />
+      </node-execution-subgraphs>
+      <nodes>
+        <single-value-field-node fieldname='[Parameters].[QB Stat Filter (copy)_2041281858613249]' fieldname-input-guid='4c365a42-9cc9-40ac-8a21-b13cb0eaf302' node-guid='7496fbe7-fcad-4f5e-a56e-580e4bba883d' value-output-guid='f29ee4dc-8530-4119-9944-24c367b56693' />
+        <axis-title-node duplicate-index='0' fieldname='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:Calculation_1081683668602884:qk]' node-guid='1023aa37-a92d-4f0e-909e-ad756b0443f3' orientation='vertical' sheet-identifier='{ADFC219E-BBD6-4653-9325-D824CFEE18BA}' title-input-guid='7dbfdffd-ba59-4a9c-ae87-9ad06b73a634' />
+        <single-value-field-node fieldname='[Parameters].[RB Stat Filter (copy)_1081683678785547]' fieldname-input-guid='78dee334-d548-4f05-a109-5f19539649ee' node-guid='7526dfad-1dc0-407f-91a7-d18d890afc2c' value-output-guid='50609581-820a-41a4-8b7b-48a621831577' />
+        <axis-title-node duplicate-index='0' fieldname='[federated.1x8ydlr1e81pby16cwqvf0ql2tha].[sum:RB Stats (copy)_1081683678978061:qk]' node-guid='bcf24e27-dcc3-48ad-bd2a-2ee2a11584bc' orientation='horizontal' sheet-identifier='{ADFC219E-BBD6-4653-9325-D824CFEE18BA}' title-input-guid='71d36e45-17d4-477a-ad28-eeaa7873bd31' />
+      </nodes>
+      <edges>
+        <edge from='50609581-820a-41a4-8b7b-48a621831577' to='71d36e45-17d4-477a-ad28-eeaa7873bd31' />
+        <edge from='f29ee4dc-8530-4119-9944-24c367b56693' to='7dbfdffd-ba59-4a9c-ae87-9ad06b73a634' />
+      </edges>
+      <pin-values />
+    </graph>
+  </datagraph>
+</workbook>
